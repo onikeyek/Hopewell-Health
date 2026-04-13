@@ -18,13 +18,14 @@ app.use(cors({
     'http://localhost:5500',
     /\.github\.io$/,
     /\.onrender\.com$/
-  ],
-  credentials: true
+  ]
 }));
 app.use(express.json());
 
 // Serve static data files
 app.use('/data', express.static(path.join(__dirname, '../hopewell-frontend/data')));
+
+// API routes
 app.use('/api/states', statesRouter);
 app.use('/api/requests', requestsRouter);
 app.use('/api/stories', storiesRouter);

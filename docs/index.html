@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HopeWell Healthcare</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <div class="logo-icon">H</div>
+        <span>HopeWell Healthcare</span>
+      </a>
+      <div class="navbar-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="requests.html">Requests</a>
+        <a href="calculator.html">Calculator</a>
+        <a href="stories.html">Stories</a>
+      </div>
+      <div class="navbar-actions">
+        <a href="donate.html" class="btn btn-primary">Donate</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="requests.html">Requests</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="stories.html">Stories</a>
+      <a href="calculator.html" class="btn btn-primary" style="width:fit-content;margin-top:0.5rem">Donate</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+    <div class="hero-pulse-ring hero-pulse-1"></div>
+    <div class="hero-pulse-ring hero-pulse-2"></div>
+
+    <div class="hero-content container">
+      <div class="hero-badge">
+        <span class="live-dot"></span> Over 1.2M Lives Impacted
+      </div>
+      <h1 class="serif-heading">Transforming Community Healthcare Across Nigeria</h1>
+      <p>Empowering lives through sustainable health interventions and dedicated medical support for every underserved community.</p>
+      <div class="hero-actions">
+        <a href="dashboard.html" class="btn btn-teal btn-lg">Join Our Mission</a>
+        <a href="stories.html" class="btn btn-outline btn-lg">Read Our Stories</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STAT CARDS — overlap hero/white boundary -->
+  <div class="hero-stats-outer">
+    <div class="hero-stats container">
+      <div class="hero-stat-card fade-in-up">
+        <div class="hero-stat-icon">👥</div>
+        <div class="hero-stat-label">BENEFICIARIES REACHED</div>
+        <div class="hero-stat-value">1.2M+ <span class="hero-stat-growth">↑ +15%</span></div>
+        <div class="hero-stat-sub">Across all medical outreach programs</div>
+      </div>
+      <div class="hero-stat-card fade-in-up" style="animation-delay:0.1s">
+        <div class="hero-stat-icon">📍</div>
+        <div class="hero-stat-label">STATES COVERED</div>
+        <div class="hero-stat-value">24 <span class="hero-stat-new">+2 New</span></div>
+        <div class="hero-stat-sub">Expanded operational network in 2024</div>
+      </div>
+      <div class="hero-stat-card fade-in-up" style="animation-delay:0.2s">
+        <div class="hero-stat-icon">🏥</div>
+        <div class="hero-stat-label">MEDICAL VOLUNTEERS</div>
+        <div class="hero-stat-value">5,000+ <span class="hero-stat-growth">↑ +12%</span></div>
+        <div class="hero-stat-sub">Doctors, nurses, and health workers</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PARTNERS STRIP -->
+  <section class="partners-strip reveal">
+    <div class="container partners-inner">
+      <div class="partner-item">🌍 Global Health NGO</div>
+      <div class="partner-divider"></div>
+      <div class="partner-item">🏛 Federal Ministry of Health</div>
+      <div class="partner-divider"></div>
+      <div class="partner-item">🏥 St. Louis Medical Center</div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section how-section reveal">
+    <div class="container">
+      <div class="section-header center">
+        <h2 class="serif-heading">How It Works</h2>
+        <p>Our integrated healthcare model reaches communities fast, easily, and efficiently.</p>
+      </div>
+      <div class="how-container">
+        <div class="how-grid">
+          <div class="how-card reveal">
+            <div class="how-icon">📋</div>
+            <h4>Step 1: Submit Request</h4>
+            <p>Community leaders or individuals submit medical needs via our secure portal.</p>
+          </div>
+          <div class="how-connector-wrap"><div class="how-dashed-line"></div></div>
+          <div class="how-card reveal" style="transition-delay:0.15s">
+            <div class="how-icon">🤝</div>
+            <h4>Step 2: Get Matched</h4>
+            <p>We match requests with available medical teams and necessary clinical resources.</p>
+          </div>
+          <div class="how-connector-wrap"><div class="how-dashed-line"></div></div>
+          <div class="how-card reveal" style="transition-delay:0.3s">
+            <div class="how-icon">🏥</div>
+            <h4>Step 3: Receive Care</h4>
+            <p>Mobile clinics or volunteers arrive to provide professional medical care on-site.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTIVE CAUSES -->
+  <section class="section causes-section reveal">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="serif-heading">Active Causes</h2>
+          <p>Join our ongoing campaigns to provide access to urgent healthcare infrastructure and supplies.</p>
+        </div>
+        <a href="requests.html" class="focus-view-all">View all causes →</a>
+      </div>
+      <div class="causes-grid">
+        <div class="cause-card reveal">
+          <div class="cause-img-wrap">
+            <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500&q=80" alt="Field Oxygen Supply" />
+            <span class="cause-tag">MEDICAL SUPPLY</span>
+          </div>
+          <div class="cause-body">
+            <h4>Field Oxygen Supply</h4>
+            <div class="cause-progress-wrap">
+              <div class="cause-progress-bar">
+                <div class="cause-progress-fill" style="--target-width:68%"></div>
+              </div>
+              <span class="cause-pct">68%</span>
+            </div>
+            <a href="calculator.html" class="btn btn-teal" style="width:100%;justify-content:center;margin-top:1rem">Donate to Cause</a>
+          </div>
+        </div>
+        <div class="cause-card cause-card-featured reveal" style="transition-delay:0.1s">
+          <div class="cause-img-wrap">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&q=80" alt="Maternal Aid Fund" />
+            <span class="cause-tag">MATERNAL HEALTH</span>
+          </div>
+          <div class="cause-body">
+            <h4>Maternal Aid Fund</h4>
+            <div class="cause-progress-wrap">
+              <div class="cause-progress-bar">
+                <div class="cause-progress-fill" style="--target-width:55%"></div>
+              </div>
+              <span class="cause-pct">55%</span>
+            </div>
+            <a href="calculator.html" class="btn btn-teal" style="width:100%;justify-content:center;margin-top:1rem">Donate to Cause</a>
+          </div>
+        </div>
+        <div class="cause-card reveal" style="transition-delay:0.2s">
+          <div class="cause-img-wrap">
+            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=500&q=80" alt="Vaccine Cold Chain" />
+            <span class="cause-tag">VACCINATION</span>
+          </div>
+          <div class="cause-body">
+            <h4>Vaccine Cold Chain</h4>
+            <div class="cause-progress-wrap">
+              <div class="cause-progress-bar">
+                <div class="cause-progress-fill" style="--target-width:40%"></div>
+              </div>
+              <span class="cause-pct">40%</span>
+            </div>
+            <a href="calculator.html" class="btn btn-teal" style="width:100%;justify-content:center;margin-top:1rem">Donate to Cause</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR FOCUS AREAS -->
+  <section class="section focus-section reveal">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="serif-heading">Our Focus Areas</h2>
+          <p>We target the most critical healthcare gaps in Nigeria, focusing on women,<br>children, and rural primary care infrastructure.</p>
+        </div>
+        <a href="dashboard.html" class="focus-view-all">View all initiatives →</a>
+      </div>
+      <div class="focus-grid">
+        <div class="focus-card reveal">
+          <div class="focus-img-wrap">
+            <img src="images/maternal-health.png" alt="Maternal Health" style="object-position: center 20%" />
+            <div class="focus-card-label">Maternal Health</div>
+          </div>
+          <p class="focus-card-desc">Reducing maternal mortality rates through prenatal care and safe delivery kits in rural villages.</p>
+        </div>
+        <div class="focus-card reveal" style="transition-delay:0.1s">
+          <div class="focus-img-wrap">
+            <img src="images/vaccination.png" alt="Vaccination Drives" style="object-position: center 15%" />
+            <div class="focus-card-label">Vaccination Drives</div>
+          </div>
+          <p class="focus-card-desc">Protecting the next generation with nationwide immunization programs for preventable diseases.</p>
+        </div>
+        <div class="focus-card reveal" style="transition-delay:0.2s">
+          <div class="focus-img-wrap">
+            <img src="images/rural-clinic.png" alt="Rural Clinics" style="object-position: center 30%" />
+            <div class="focus-card-label">Rural Clinics</div>
+          </div>
+          <p class="focus-card-desc">Rehabilitating and equipping primary healthcare centers to provide 24/7 medical access.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORIES OF IMPACT -->
+  <section class="section testimonials-section reveal">
+    <div class="container">
+      <div class="section-header center">
+        <h2 class="serif-heading">Stories of Impact</h2>
+        <p>Direct voices from the communities our work reaches every day in Nigeria.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <p class="testimonial-quote">"The HopeWell team came and gave my daughter the help she needed. Many of us had no idea where to turn — they changed everything for our community."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AT</div>
+            <div>
+              <div class="testimonial-name">Amina Tukur</div>
+              <div class="testimonial-location">Kano State</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal" style="transition-delay:0.15s">
+          <p class="testimonial-quote">"A volunteer appeared and HopeWell has been life-turning and life-saving, closing the immeasurable gap in basic primary healthcare for our community."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">EO</div>
+            <div>
+              <div class="testimonial-name">Dr. Emeka Obi</div>
+              <div class="testimonial-location">Rivers State</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST NEWS -->
+  <section class="section news-section reveal">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="serif-heading">Latest News</h2>
+          <p>Stay updated with our latest findings, innovations, and community achievements.</p>
+        </div>
+        <a href="stories.html" class="focus-view-all">Read all articles →</a>
+      </div>
+      <div class="news-grid">
+        <div class="news-card reveal">
+          <div class="news-img-wrap">
+            <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500&q=80" alt="New Clinic Opens" />
+          </div>
+          <div class="news-body">
+            <div class="news-date">January 15, 2024</div>
+            <h4>New Clinic Opens in Kano State to Serve 10,000+ Residents</h4>
+            <a href="stories.html" class="news-read-link">Read more →</a>
+          </div>
+        </div>
+        <div class="news-card reveal" style="transition-delay:0.1s">
+          <div class="news-img-wrap news-img-teal">
+            <div class="news-icon-big">🏥</div>
+            <div class="news-img-label">HEALTH</div>
+          </div>
+          <div class="news-body">
+            <div class="news-date">July 22, 2024</div>
+            <h4>National Vaccination Milestone: 730% Children Immunised</h4>
+            <a href="stories.html" class="news-read-link">Read more →</a>
+          </div>
+        </div>
+        <div class="news-card reveal" style="transition-delay:0.2s">
+          <div class="news-img-wrap news-img-dark">
+            <div class="news-icon-big">📡</div>
+            <div class="news-img-label">TECH NEWS</div>
+          </div>
+          <div class="news-body">
+            <div class="news-date">July 30, 2024</div>
+            <h4>Integrating Mobile Tech into Rural Patient Follow-up Care</h4>
+            <a href="stories.html" class="news-read-link">Read more →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner reveal">
+    <div class="container cta-inner">
+      <div>
+        <h2 class="serif-heading">Ready to join the mission?</h2>
+        <p>Whether you're a medical professional, a donor, or a volunteer, your contribution directly funds medications, equipment, and medical outreaches.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="volunteer.html" class="btn btn-outline btn-lg">Become a Volunteer</a>
+        <a href="#" class="btn btn-teal btn-lg">Partner With Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="navbar-logo">
+            <div class="logo-icon">H</div>
+            <span>HopeWell</span>
+          </a>
+          <p>Dedicated to bringing the healthcare gap in underserved regions through innovation and community support.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Twitter">🐦</a>
+            <a href="#" aria-label="Email">✉</a>
+            <a href="#" aria-label="Share">🔗</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="dashboard.html">Our Impact</a></li>
+            <li><a href="stories.html">Latest Stories</a></li>
+            <li><a href="calculator.html">Cost Calculator</a></li>
+            <li><a href="#">Resources</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get Involved</h4>
+          <ul>
+            <li><a href="calculator.html">Donate Now</a></li>
+            <li><a href="#">Volunteer Program</a></li>
+            <li><a href="#">Corporate Partnerships</a></li>
+            <li><a href="#">Fundraising</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="#">📍 Lagos, Nigeria</a></li>
+            <li><a href="#">✉ hello@hopewell.ng</a></li>
+            <li><a href="#">📞 +234 (0)1 800 HOPEWELL</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 HopeWell Healthcare Foundation. All rights reserved. Registered Non-Profit Organisation.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Contact Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

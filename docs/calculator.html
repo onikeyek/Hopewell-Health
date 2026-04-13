@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donation Calculator — HopeWell</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/calculator.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+</head>
+<body class="calc-body">
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <div class="logo-icon">H</div>
+        <span>HopeWell</span>
+      </a>
+      <div class="navbar-links">
+        <a href="#">How it works</a>
+        <a href="stories.html">Our Projects</a>
+        <a href="dashboard.html">Transparency</a>
+      </div>
+      <div class="navbar-actions">
+        <button class="icon-btn-nav">🔔</button>
+        <button class="icon-btn-nav">👤</button>
+        <a href="calculator.html" class="btn btn-primary">Donate Now</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#">How it works</a>
+      <a href="stories.html">Our Projects</a>
+      <a href="dashboard.html">Transparency</a>
+    </div>
+  </nav>
+
+  <!-- PAGE -->
+  <main class="calc-main">
+    <div class="calc-container">
+
+      <!-- HEADER -->
+      <div class="calc-header">
+        <div class="transparent-badge">✦ TRANSPARENT GIVING</div>
+        <h1 class="serif-heading">Donation Impact Calculator</h1>
+        <p>See how your contribution changes lives in Nigeria. Every Naira donated to<br class="hide-mobile"> HopeWell goes directly to healing communities.</p>
+      </div>
+
+      <!-- CALCULATOR CARD -->
+      <div class="calc-card">
+
+        <!-- INPUT SECTION -->
+        <div class="calc-input-section">
+          <label class="calc-input-label">ENTER DONATION AMOUNT (₦)</label>
+          <div class="calc-input-wrap" id="inputWrap">
+            <span class="currency-symbol">₦</span>
+            <input
+              type="number"
+              id="donationInput"
+              class="calc-input"
+              value="50000"
+              min="100"
+              placeholder="0"
+            />
+          </div>
+          <div class="preset-btns">
+            <button class="preset-btn" data-amount="10000">₦10k</button>
+            <button class="preset-btn active" data-amount="50000">₦50k</button>
+            <button class="preset-btn" data-amount="100000">₦100k</button>
+            <button class="preset-btn" data-amount="custom">Custom</button>
+          </div>
+        </div>
+
+        <!-- DIVIDER -->
+        <div class="calc-divider"></div>
+
+        <!-- IMPACT SNAPSHOT -->
+        <div class="impact-section">
+          <h3>Your Impact Snapshot</h3>
+          <div class="impact-grid">
+            <div class="impact-item">
+              <div class="impact-icon" style="background:#eff6ff">
+                <img src="images/first-aid-box.png" alt="Health Kits" />
+              </div>
+              <div class="impact-value" id="impactKits">12</div>
+              <div class="impact-label">HEALTHKITS</div>
+              <div class="impact-desc">Essential medical supplies for family clinics.</div>
+            </div>
+            <div class="impact-item">
+              <div class="impact-icon" style="background:#f0fdf4">
+                <img src="images/icons8-vaccination-64.png" alt="Vaccinations" />
+              </div>
+              <div class="impact-value" id="impactVaccines">25</div>
+              <div class="impact-label">VACCINATIONS</div>
+              <div class="impact-desc">Full immunization support units for children.</div>
+            </div>
+            <div class="impact-item">
+              <div class="impact-icon" style="background:#fff7ed">🏥</div>
+              <div class="impact-value" id="impactHours">4.5</div>
+              <div class="impact-label">CLINIC HOURS</div>
+              <div class="impact-desc">Operational hours for mobile health units.</div>
+            </div>
+            <div class="impact-item">
+              <div class="impact-icon" style="background:#faf5ff">
+                <img src="images/medical-team.png" alt="Volunteers" />
+              </div>
+              <div class="impact-value" id="impactVolunteers">8</div>
+              <div class="impact-label">VOLUNTEERS</div>
+              <div class="impact-desc">Daily field support and logistics coordination.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA BANNER -->
+      <div class="calc-cta">
+        <div class="calc-cta-text">
+          <h3>Ready to make an impact?</h3>
+          <p>Join 12,000+ donors making a difference in rural Nigeria.</p>
+        </div>
+        <div class="calc-cta-actions">
+          <button class="btn btn-outline btn-lg" style="color:var(--white);border-color:rgba(255,255,255,0.5)">Proceed to Donate</button>
+          <button class="btn btn-teal btn-lg" id="shareBtn">Share Impact</button>
+        </div>
+      </div>
+
+      <!-- TRUST BADGES -->
+      <div class="trust-badges">
+        <div class="trust-badge">🛡 Safe Giving Cert.</div>
+        <div class="trust-badge">🌐 UN Health Partner</div>
+        <div class="trust-badge">🏛 Transparent Audit</div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="calc-footer">
+    <div class="calc-footer-inner">
+      <a href="index.html" class="navbar-logo">
+        <div class="logo-icon">H</div>
+        <span>HopeWell</span>
+      </a>
+      <div class="calc-footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Contact Support</a>
+      </div>
+      <p>© 2024 HopeWell International. Healing Communities.</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/calculator.js"></script>
+</body>
+</html>
