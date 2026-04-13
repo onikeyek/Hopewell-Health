@@ -92,7 +92,7 @@ function onEachFeature(feature, layer) {
 
 const MAP_DATA_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
   ? 'http://localhost:3000/data/nigeria-states.geojson'
-  : 'https://hopewell-backend.onrender.com/data/nigeria-states.geojson';
+  : 'https://hopewell-health.onrender.com/data/nigeria-states.geojson';
 
 async function initMap() {
   const el = document.getElementById('nigeriaMap');

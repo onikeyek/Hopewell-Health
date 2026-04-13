@@ -3,7 +3,7 @@
 // Switch between local dev and production
 const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
   ? 'http://localhost:3000/api'
-  : 'https://hopewell-backend.onrender.com/api';
+  : 'https://hopewell-health.onrender.com/api';
 
 // Generic fetch wrapper with error handling
 async function apiFetch(endpoint) {
