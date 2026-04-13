@@ -1,0 +1,440 @@
+{
+  "states": [
+    {
+      "id": 1,
+      "name": "Lagos",
+      "beneficiaries": 320000,
+      "vaccines": 18500,
+      "volunteers": 820,
+      "medical_aid": 120000
+    },
+    {
+      "id": 2,
+      "name": "Kano",
+      "beneficiaries": 210000,
+      "vaccines": 14200,
+      "volunteers": 610,
+      "medical_aid": 89000
+    },
+    {
+      "id": 3,
+      "name": "Abuja",
+      "beneficiaries": 175000,
+      "vaccines": 11000,
+      "volunteers": 490,
+      "medical_aid": 74000
+    },
+    {
+      "id": 4,
+      "name": "Rivers",
+      "beneficiaries": 198000,
+      "vaccines": 13400,
+      "volunteers": 540,
+      "medical_aid": 81000
+    },
+    {
+      "id": 5,
+      "name": "Oyo",
+      "beneficiaries": 162000,
+      "vaccines": 10800,
+      "volunteers": 430,
+      "medical_aid": 67000
+    },
+    {
+      "id": 6,
+      "name": "Kaduna",
+      "beneficiaries": 175000,
+      "vaccines": 17200,
+      "volunteers": 260,
+      "medical_aid": 41000
+    }
+  ],
+  "monthly_trends": [
+    {
+      "month": "Jan",
+      "outreach": 38000
+    },
+    {
+      "month": "Feb",
+      "outreach": 42000
+    },
+    {
+      "month": "Mar",
+      "outreach": 55000
+    },
+    {
+      "month": "Apr",
+      "outreach": 49000
+    },
+    {
+      "month": "May",
+      "outreach": 61000
+    },
+    {
+      "month": "Jun",
+      "outreach": 245000
+    }
+  ],
+  "assistance_requests": [
+    {
+      "id": 1,
+      "ref": "REQ-4029-LAG",
+      "title": "Emergency Antimalarial Supply",
+      "description": "Severe malaria case in rural community. Requires immediate ACT dosage and hydration kits. Transport needed to community clinic.",
+      "priority": "urgent",
+      "status": "in-transit",
+      "requester": "Chidi Okafor",
+      "age": 8,
+      "gender": "Male",
+      "state": "Lagos",
+      "location": "Lagos (Ikorodu)",
+      "full_location": "Lagos, Nigeria",
+      "date": "Mar 12, 2026 \u00b7 09:45 AM",
+      "icon": "\ud83d\ude91",
+      "diagnosis": "Severe Plasmodium falciparum malaria with persistent high fever (39.8\u00b0C) and early signs of dehydration.",
+      "immediate_needs": [
+        "IV Artesunate (3 doses)",
+        "Ringer's Lactate infusion",
+        "Oral Artemether-lumefantrine follow-up"
+      ],
+      "assigned_doctor": "Dr. Emeka Obi",
+      "doctor_role": "Lead Physician",
+      "duty_station": "Lagos Central",
+      "availability": "On Call",
+      "logistics_origin": "KANO HUB",
+      "logistics_origin_time": "Dispatched 08:30",
+      "logistics_destination": "LAGOS CLINIC",
+      "logistics_eta": "ETA 14:45",
+      "logistics_position": "Near Lokoja, Kogi State",
+      "timeline": [
+        {
+          "event": "Supply Dispatched",
+          "time": "Today, 08:30",
+          "detail": "Medical courier vehicle #NG-442 departed Kano Regional Hub."
+        },
+        {
+          "event": "Triage Complete",
+          "time": "Today, 07:45",
+          "detail": "Request validated by Dr. Emeka Obi. Priority escalated to P1."
+        },
+        {
+          "event": "Request Received",
+          "time": "Today, 07:12",
+          "detail": "Automated intake from Lagos Community Health Center."
+        }
+      ],
+      "system_note": "System note: Priority established based on pediatric severity index and inventory proximity. ETA is subject to traffic conditions on Lagos-Ibadan expressway."
+    },
+    {
+      "id": 2,
+      "title": "Sickle Cell Crisis Support",
+      "description": "Patient experiencing vaso-occlusive crisis. Home-based pain management and fluid monitoring requested.",
+      "priority": "normal",
+      "status": "in-progress",
+      "requester": "Amina Yusuf",
+      "state": "Kano",
+      "location": "Kano (Dala)",
+      "date": "Mar 11, 2026 \u00b7 02:15 PM",
+      "icon": "\ud83d\udca7",
+      "assigned_doctor": "Bayo Balogun",
+      "doctor_role": "Team Leader",
+      "duty_station": "Kano Central",
+      "availability": "On Call",
+      "team": [
+        {
+          "name": "Bayo Balogun",
+          "role": "Team Leader"
+        },
+        {
+          "name": "Dr. Aisha Musa",
+          "role": "Haematologist"
+        },
+        {
+          "name": "Nurse Kemi Adio",
+          "role": "Pain Management"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Post-Natal Wellness Check",
+      "description": "Follow-up for new mother and infant. Immunization schedule confirmed and nutritional counseling provided.",
+      "priority": "low",
+      "status": "resolved",
+      "requester": "Efe Ohwofasa",
+      "state": "Rivers",
+      "location": "Port Harcourt",
+      "date": "Mar 10, 2026 \u00b7 11:30 AM",
+      "icon": "\ud83c\udf3f"
+    },
+    {
+      "id": 4,
+      "title": "Hypertension Monitoring",
+      "description": "Weekly blood pressure monitoring for elderly patient. Prescription refill for Lisinopril required.",
+      "priority": "low",
+      "status": "open",
+      "requester": "Baba Gana",
+      "state": "Borno",
+      "location": "Maiduguri",
+      "date": "Mar 12, 2026 \u00b7 08:00 AM",
+      "icon": "\ud83e\ude7a"
+    },
+    {
+      "id": 5,
+      "title": "Cholera Prevention Outreach",
+      "description": "Distribution of water purification tablets and oral rehydration salts to displaced families.",
+      "priority": "high",
+      "status": "open",
+      "requester": "Zainab Ibrahim",
+      "state": "Benue",
+      "location": "Benue State",
+      "date": "Mar 13, 2026 \u00b7 10:00 AM",
+      "icon": "\ud83d\udc8a",
+      "assigned_doctor": "Chidera Favour",
+      "doctor_role": "Team Leader",
+      "duty_station": "Benue Field Base",
+      "availability": "Active",
+      "team": [
+        {
+          "name": "Chidera Favour",
+          "role": "Team Leader"
+        },
+        {
+          "name": "Volunteer needed",
+          "role": "Field Support"
+        },
+        {
+          "name": "Volunteer needed",
+          "role": "Logistics"
+        }
+      ],
+      "volunteers_needed": true,
+      "volunteers_message": "This team needs more volunteers to join the outreach group."
+    },
+    {
+      "id": 6,
+      "title": "Emergency Blood Bag (O-ve)",
+      "description": "Critical need for two bags of O-negative blood for surgery at Island Maternity Hospital.",
+      "priority": "urgent",
+      "status": "open",
+      "requester": "Adeola Ogunleye",
+      "state": "Lagos",
+      "location": "Lagos Island, Lagos",
+      "date": "Mar 13, 2026 \u00b7 08:30 AM",
+      "icon": "\ud83e\ude78"
+    },
+    {
+      "id": 7,
+      "title": "Community Immunization Drive",
+      "description": "Logistical support needed to distribute polio vaccines to rural clinics in Gwagwalada area.",
+      "priority": "normal",
+      "status": "in-progress",
+      "requester": "Dr. Musa Ibrahim",
+      "state": "Abuja",
+      "location": "Abuja, FCT",
+      "date": "Mar 13, 2026 \u00b7 10:15 AM",
+      "icon": "\ud83d\udc89"
+    },
+    {
+      "id": 8,
+      "title": "Clean Water Station Repair",
+      "description": "Borehole pump replaced at Makoko community health post. Water flow restored for 200+ families.",
+      "priority": "low",
+      "status": "resolved",
+      "requester": "Efe Okoro",
+      "state": "Lagos",
+      "location": "Yaba, Lagos",
+      "date": "Mar 12, 2026 \u00b7 04:45 PM",
+      "icon": "\ud83d\udd27"
+    },
+    {
+      "id": 9,
+      "title": "Maternal Care Supplies",
+      "description": "Request for delivery of clean birth kits and post-natal supplements to Onitsha General Hospital.",
+      "priority": "high",
+      "status": "open",
+      "requester": "Nurse Chinwe",
+      "state": "Anambra",
+      "location": "Onitsha, Anambra",
+      "date": "Mar 13, 2026 \u00b7 11:00 AM",
+      "icon": "\ud83e\udd31"
+    },
+    {
+      "id": 10,
+      "title": "Mental Health Counseling",
+      "description": "Remote counseling session request for a student dealing with displacement trauma.",
+      "priority": "low",
+      "status": "in-progress",
+      "requester": "Bello Yusuf",
+      "state": "Borno",
+      "location": "Maiduguri, Borno",
+      "date": "Mar 13, 2026 \u00b7 01:30 PM",
+      "icon": "\ud83e\udde0"
+    },
+    {
+      "id": 11,
+      "title": "Tuberculosis Screening Camp",
+      "description": "Mobile TB screening unit needed for Agege market area. High-risk population identified.",
+      "priority": "urgent",
+      "status": "open",
+      "requester": "Dr. Folake Adeyemi",
+      "state": "Lagos",
+      "location": "Agege, Lagos",
+      "date": "Mar 14, 2026 \u00b7 07:00 AM",
+      "icon": "\ud83e\udec1"
+    },
+    {
+      "id": 12,
+      "title": "Dialysis Transport Support",
+      "description": "Recurring transport needed for Tuesday/Thursday dialysis sessions at Aminu Kano Teaching Hospital.",
+      "priority": "normal",
+      "status": "in-progress",
+      "requester": "Hauwa Suleiman",
+      "state": "Kano",
+      "location": "Kano Municipal",
+      "date": "Mar 14, 2026 \u00b7 09:00 AM",
+      "icon": "\ud83d\ude90"
+    },
+    {
+      "id": 13,
+      "title": "Oxygen Cylinder Refill",
+      "description": "Three oxygen cylinders depleted at Ilorin cottage hospital. Urgent refill needed for ICU patients.",
+      "priority": "urgent",
+      "status": "open",
+      "requester": "Nurse Taiwo",
+      "state": "Kwara",
+      "location": "Ilorin, Kwara",
+      "date": "Mar 14, 2026 \u00b7 06:30 AM",
+      "icon": "\ud83e\udee7"
+    },
+    {
+      "id": 14,
+      "title": "Diabetes Medication Restock",
+      "description": "Metformin and insulin stocks critically low at Enugu rural health centre. Restock required.",
+      "priority": "high",
+      "status": "open",
+      "requester": "Obiora Nwosu",
+      "state": "Enugu",
+      "location": "Enugu North",
+      "date": "Mar 14, 2026 \u00b7 11:00 AM",
+      "icon": "\ud83d\udc8a"
+    },
+    {
+      "id": 15,
+      "title": "Child Nutrition Assessment",
+      "description": "Nutritional screening for 45 children under 5 in IDP camp. Severe acute malnutrition suspected.",
+      "priority": "urgent",
+      "status": "in-progress",
+      "requester": "Fatima Al-Amin",
+      "state": "Borno",
+      "location": "Konduga, Borno",
+      "date": "Mar 14, 2026 \u00b7 08:00 AM",
+      "icon": "\ud83d\udc76"
+    },
+    {
+      "id": 16,
+      "title": "Wound Dressing Supplies",
+      "description": "Post-surgical wound care supplies needed for 12 patients at Warri General Hospital.",
+      "priority": "normal",
+      "status": "open",
+      "requester": "Dr. Ovie Efe",
+      "state": "Delta",
+      "location": "Warri, Delta",
+      "date": "Mar 14, 2026 \u00b7 02:00 PM",
+      "icon": "\ud83e\ude79"
+    },
+    {
+      "id": 17,
+      "title": "Ambulance Dispatch Request",
+      "description": "Emergency vehicle needed for accident victim on Sagamu-Ore expressway. Critical condition.",
+      "priority": "urgent",
+      "status": "open",
+      "requester": "Ogun Emergency Unit",
+      "state": "Ogun",
+      "location": "Sagamu, Ogun",
+      "date": "Mar 14, 2026 \u00b7 03:15 PM",
+      "icon": "\ud83d\udea8"
+    },
+    {
+      "id": 18,
+      "title": "Physiotherapy Home Visit",
+      "description": "Stroke rehabilitation patient requires weekly physiotherapy. Home visit arrangement needed.",
+      "priority": "low",
+      "status": "resolved",
+      "requester": "Mrs. Adaeze Obi",
+      "state": "Anambra",
+      "location": "Awka, Anambra",
+      "date": "Mar 13, 2026 \u00b7 03:00 PM",
+      "icon": "\ud83e\uddbd"
+    },
+    {
+      "id": 19,
+      "title": "Eye Care Outreach",
+      "description": "Free eye screening and glasses distribution for elderly residents in Sokoto rural community.",
+      "priority": "normal",
+      "status": "open",
+      "requester": "Dr. Usman Bello",
+      "state": "Sokoto",
+      "location": "Sokoto North",
+      "date": "Mar 15, 2026 \u00b7 09:00 AM",
+      "icon": "\ud83d\udc41"
+    },
+    {
+      "id": 20,
+      "title": "Midwife Deployment Request",
+      "description": "Two certified midwives needed for delivery support at Katsina rural maternity ward this weekend.",
+      "priority": "high",
+      "status": "open",
+      "requester": "Hajiya Maryam",
+      "state": "Katsina",
+      "location": "Katsina Central",
+      "date": "Mar 15, 2026 \u00b7 10:30 AM",
+      "icon": "\ud83d\udc69\u200d\u2695\ufe0f"
+    }
+  ],
+  "donation_rates": {
+    "health_kits_per_1000": 0.24,
+    "vaccinations_per_1000": 0.5,
+    "clinic_hours_per_1000": 0.09,
+    "volunteers_per_1000": 0.16
+  },
+  "success_stories": [
+    {
+      "id": 1,
+      "category": "Community Impact",
+      "title": "Revitalizing Rural Health in Nigeria",
+      "body": "The deployment of mobile clinics has bridged a critical gap in service delivery. For families in remote regions, what was once a day-long journey for basic care is now a 20-minute walk to our rolling service hubs.",
+      "stat1_label": "Beneficiaries Treated",
+      "stat1_value": "8,500",
+      "stat2_label": "Local Volunteers Trained",
+      "stat2_value": "200+",
+      "image": "https://images.unsplash.com/photo-1584515933487-779824d29309?w=600&q=80",
+      "image_alt": "Healthcare worker with patient"
+    },
+    {
+      "id": 2,
+      "category": "Personal Story",
+      "title": "Empowering Local Midwives",
+      "body": "By investing in structured training programs and sterile delivery kits, we have supported over 300 midwives across 14 states. This initiative directly addresses the roots of maternal mortality through education and equipment.",
+      "stat1_label": "Reduction in Maternal Mortality",
+      "stat1_value": "30%",
+      "stat2_label": "Midwives Trained",
+      "stat2_value": "300+",
+      "image": "https://images.unsplash.com/photo-1531983412531-1f49a365ffed?w=600&q=80",
+      "image_alt": "Mother and newborn"
+    },
+    {
+      "id": 3,
+      "category": "Infrastructure",
+      "slug": "water-initiative",
+      "title": "Beyond Medicine: The Water Initiative",
+      "body": "Health starts with clean water. HopeWell installed solar-powered filtration systems in 5 regional hospitals, ensuring that surgical theatres and clinic wards have 24/7 access to sterile water.",
+      "stat1_label": "Daily Filtration Capacity",
+      "stat1_value": "15,000L",
+      "stat2_label": "Powered by Solar Energy",
+      "stat2_value": "100%",
+      "image": "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=600&q=80",
+      "image_alt": "Solar panels at clinic"
+    }
+  ]
+}

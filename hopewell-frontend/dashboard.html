@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impact Dashboard — HopeWell</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body class="dash-body">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-icon">H</div>
+      <div>
+        <div class="sidebar-brand">Hopewell</div>
+        <div class="sidebar-sub">CLINICAL SANCTUARY</div>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="dashboard.html" class="sidebar-link active">
+        <span class="sidebar-icon">⊞</span> Dashboard
+      </a>
+      <a href="requests.html" class="sidebar-link">
+        <span class="sidebar-icon">👤</span> Patient Records
+      </a>
+      <a href="#" class="sidebar-link">
+        <span class="sidebar-icon">📊</span> Analytics
+      </a>
+      <a href="#" class="sidebar-link">
+        <span class="sidebar-icon">📅</span> Schedules
+      </a>
+      <a href="#" class="sidebar-link">
+        <span class="sidebar-icon">⚙</span> Settings
+      </a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <a href="#" class="sidebar-link sidebar-audit">
+        <span class="sidebar-icon">🕐</span> Audit Logs
+      </a>
+    </div>
+  </aside>
+
+  <!-- MAIN WRAPPER -->
+  <div class="dash-wrapper">
+
+    <!-- TOP BAR -->
+    <header class="dash-topbar">
+      <div class="topbar-left">
+        <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">☰</button>
+        <a href="index.html" class="topbar-brand">
+          <span class="topbar-brand-name">Hopewell Healthcare</span>
+        </a>
+        <nav class="topbar-nav">
+          <a href="dashboard.html" class="topbar-link active">Dashboard</a>
+          <a href="#" class="topbar-link">Impact Map</a>
+          <a href="#" class="topbar-link">Clinical Data</a>
+        </nav>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-search">
+          <span class="search-icon-sm">🔍</span>
+          <input type="text" placeholder="Search records..." />
+        </div>
+        <a href="requests.html" class="btn btn-teal btn-sm">+ New Patient</a>
+        <button class="icon-btn" aria-label="Notifications">🔔</button>
+        <button class="icon-btn" aria-label="Settings">⚙</button>
+        <div class="topbar-avatar">J</div>
+      </div>
+    </header>
+
+    <!-- PAGE CONTENT -->
+    <main class="dash-content">
+
+      <!-- PAGE HEADER -->
+      <div class="dash-page-header">
+        <div class="dash-page-title">
+          <h1>Impact<br>Dashboard</h1>
+          <p>Real-time surveillance and operational metrics for the Clinical Sanctuary network.</p>
+        </div>
+        <div class="dash-page-actions">
+          <div class="time-filters">
+            <button class="time-btn active">Month</button>
+            <button class="time-btn">Quarter</button>
+            <button class="time-btn">Year</button>
+          </div>
+          <div class="state-select-wrap">
+            <select id="stateFilter" class="state-select-dash">
+              <option>Lagos State</option>
+              <option>Kano State</option>
+              <option>Abuja</option>
+              <option>Rivers State</option>
+              <option>Oyo State</option>
+              <option>Kaduna State</option>
+            </select>
+          </div>
+          <a href="requests.html" class="btn btn-teal btn-sm">+ New Request</a>
+        </div>
+      </div>
+
+      <!-- STAT CARDS -->
+      <div class="dash-stats-grid">
+        <div class="stat-card stat-card-dark">
+          <div class="stat-label-sm">BENEFICIARIES REACHED</div>
+          <div class="stat-val-lg">2.4M</div>
+          <div class="stat-growth positive">↑ +12.4%</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label-sm">MEDICAL AID PROVIDED</div>
+          <div class="stat-val-lg">852k</div>
+          <div class="stat-growth positive">↗ +8.1%</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label-sm">VACCINATION CAMPAIGNS</div>
+          <div class="stat-val-lg">1,240</div>
+          <div class="stat-meta">🗓 This Year</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label-sm">VOLUNTEERS DEPLOYED</div>
+          <div class="stat-val-lg">4,821</div>
+          <div class="stat-meta">👥 Active Now</div>
+        </div>
+      </div>
+
+      <!-- CHART -->
+      <div class="card dash-chart-card">
+        <div class="chart-top">
+          <div>
+            <div class="chart-title">Performance Surveillance</div>
+            <div class="chart-subtitle">GROWTH METRICS &amp; TRENDS</div>
+          </div>
+          <div class="chart-toggle">
+            <button class="chart-toggle-btn active" id="btnBeneficiaries">Beneficiaries</button>
+            <button class="chart-toggle-btn" id="btnVaccinations">Vaccinations</button>
+          </div>
+        </div>
+        <div class="chart-wrap">
+          <canvas id="outreachChart"></canvas>
+        </div>
+      </div>
+
+      <!-- SYSTEM ALERTS -->
+      <div class="alerts-banner">
+        <div class="alerts-title">
+          <span class="alert-icon">⚠</span> System Critical Alerts
+        </div>
+        <div class="alerts-grid">
+          <div class="alert-card alert-red">
+            <div class="alert-card-icon">🔴</div>
+            <div>
+              <div class="alert-tag">SUPPLY SHORTAGE</div>
+              <p>Insulin stocks below 15% in Kano Regional Hub. Immediate restocking required.</p>
+            </div>
+          </div>
+          <div class="alert-card alert-green">
+            <div class="alert-card-icon">🟢</div>
+            <div>
+              <div class="alert-tag">CAPACITY NOTICE</div>
+              <p>Lagos Central reaching bed occupancy limits (84%). Redirecting non-emergencies.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM GRID -->
+      <div class="dash-bottom-grid">
+
+        <!-- RECENT REQUESTS -->
+        <div class="card recent-requests-card">
+          <div class="card-header-row">
+            <h3>Recent Requests</h3>
+            <a href="requests.html" class="view-all-link">View All →</a>
+          </div>
+          <div id="recentRequestsList">
+            <div class="loading-state"><div class="spinner"></div></div>
+          </div>
+        </div>
+
+        <!-- REGIONAL REACH -->
+        <div class="card regional-reach-card">
+          <div class="card-header-row">
+            <div>
+              <h3>Regional Reach</h3>
+              <div class="card-subtitle">GEOGRAPHIC IMPACT DENSITY</div>
+            </div>
+            <span class="high-activity-badge">● High Activity</span>
+          </div>
+
+          <!-- Nigeria interactive map -->
+          <div id="nigeriaMap" class="nigeria-map"></div>
+
+          <div class="regional-zones" id="regionalZones">
+            <div class="zone-item">
+              <div class="zone-label">SOUTHWEST</div>
+              <div class="zone-pct">82%</div>
+              <div class="zone-bar"><div class="zone-fill" style="--w:82%"></div></div>
+            </div>
+            <div class="zone-item">
+              <div class="zone-label">NORTHWEST</div>
+              <div class="zone-pct">45%</div>
+              <div class="zone-bar"><div class="zone-fill" style="--w:45%"></div></div>
+            </div>
+            <div class="zone-item">
+              <div class="zone-label">SOUTH SOUTH</div>
+              <div class="zone-pct">61%</div>
+              <div class="zone-bar"><div class="zone-fill" style="--w:61%"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- VOLUNTEER ACTIVITY -->
+      <div class="card volunteer-card">
+        <div class="card-header-row">
+          <div>
+            <h3>Volunteer Activity</h3>
+            <div class="card-subtitle">Live updates from frontline deployments across the federation.</div>
+          </div>
+          <button class="btn btn-primary btn-sm">View All</button>
+        </div>
+        <div class="volunteer-grid" id="volunteerGrid">
+          <div class="volunteer-item">
+            <div class="volunteer-avatar" style="background:#0d9488">JD</div>
+            <div>
+              <div class="volunteer-name">Jane Doe</div>
+              <div class="volunteer-role">Mobile Clinic Unit 64</div>
+              <div class="volunteer-status">ACTIVE IN OYO</div>
+            </div>
+          </div>
+          <div class="volunteer-item">
+            <div class="volunteer-avatar" style="background:#0f172a">AM</div>
+            <div>
+              <div class="volunteer-name">Ahmed Musa</div>
+              <div class="volunteer-role">Rural Vaccination Lead</div>
+              <div class="volunteer-status">ACTIVE IN KANO</div>
+            </div>
+          </div>
+          <div class="volunteer-item">
+            <div class="volunteer-avatar" style="background:#7c3aed">CE</div>
+            <div>
+              <div class="volunteer-name">Chidinma E.</div>
+              <div class="volunteer-role">Trauma Specialist</div>
+              <div class="volunteer-status">ACTIVE IN RIVERS</div>
+            </div>
+          </div>
+          <div class="volunteer-top-state">
+            <div class="top-state-label">TOP ENGAGEMENT</div>
+            <div class="top-state-name">Lagos State</div>
+            <div class="top-state-sub">42 active deployments</div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/map.js"></script>
+</body>
+</html>

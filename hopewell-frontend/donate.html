@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate — HopeWell Healthcare</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/donate.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+</head>
+<body class="donate-body">
+
+  <!-- STEP 1 & 2 NAVBAR -->
+  <nav class="donate-nav" id="mainNav">
+    <div class="donate-nav-inner">
+      <a href="index.html" class="navbar-logo">
+        <div class="logo-icon">H</div>
+        <span>Hopewell Healthcare</span>
+      </a>
+      <div class="navbar-links">
+        <a href="#">Our Mission</a>
+        <a href="#">Find Care</a>
+        <a href="dashboard.html">Impact</a>
+      </div>
+      <a href="donate.html" class="btn btn-teal">Donate Now</a>
+    </div>
+  </nav>
+
+  <!-- PAYMENT NAVBAR (step 4) -->
+  <nav class="donate-nav donate-nav-secure" id="secureNav" style="display:none">
+    <div class="donate-nav-inner">
+      <a href="index.html" class="navbar-logo">
+        <div class="logo-icon">H</div>
+        <span>Hopewell Healthcare</span>
+      </a>
+      <div class="secure-badge">🔒 SECURE CHECKOUT</div>
+    </div>
+  </nav>
+
+  <!-- ===== STEP 1: AMOUNT ===== -->
+  <div class="donate-step" id="step1">
+    <div class="donate-page-header container">
+      <h1 class="serif-heading">Your Support,<br><span class="teal-text">Healing Our Community.</span></h1>
+      <p>Join our mission of clinical sanctuary. Every contribution directly funds critical medical care for those who need it most.</p>
+    </div>
+
+    <div class="donate-stepper container">
+      <div class="stepper-item active"><div class="stepper-dot active">1</div><div class="stepper-label">Amount</div></div>
+      <div class="stepper-line"></div>
+      <div class="stepper-item"><div class="stepper-dot">2</div><div class="stepper-label">Details</div></div>
+      <div class="stepper-line"></div>
+      <div class="stepper-item"><div class="stepper-dot">3</div><div class="stepper-label">Review</div></div>
+    </div>
+
+    <div class="donate-layout container">
+      <div class="donate-form-card">
+        <div class="donate-form-title">
+          <span class="donate-form-icon">🤝</span>
+          <h3>Select Donation Amount</h3>
+        </div>
+
+        <div class="prefill-notice">
+          <span>⊞</span>
+          Amount pre-filled from your clinical need calculator. You can adjust it below.
+        </div>
+
+        <div class="amount-presets">
+          <button class="amount-btn" data-amount="1000">₦1,000</button>
+          <button class="amount-btn active" data-amount="5000">₦5,000</button>
+          <button class="amount-btn" data-amount="10000">₦10,000</button>
+          <button class="amount-btn" data-amount="50000">₦50,000</button>
+        </div>
+
+        <div class="custom-amount-wrap">
+          <label class="field-label">Custom Donation Amount (₦)</label>
+          <div class="custom-input-wrap">
+            <span class="currency-prefix">₦</span>
+            <input type="number" id="customAmount" placeholder="Enter amount" min="100" />
+          </div>
+        </div>
+
+        <button class="btn-donate-continue" id="step1Next">Continue to Details →</button>
+      </div>
+
+      <div class="donate-sidebar">
+        <div class="impact-preview-card">
+          <h4>Your Impact</h4>
+          <p id="impactPreviewText">A donation of ₦5,000 provides basic screening and medication for 3 patients in our community sanctuary program.</p>
+          <div class="impact-testimonial">
+            <div class="impact-testimonial-avatar">MA</div>
+            <p>"Hopewell gave me back my mobility when I thought all was lost." — Mr. Adebayo</p>
+          </div>
+        </div>
+        <div class="secure-sanctuary-card">
+          <span class="secure-icon">🛡</span>
+          <div>
+            <div class="secure-title">Secure Sanctuary</div>
+            <p>Your data is encrypted using clinical-grade security standards.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== STEP 2: DETAILS ===== -->
+  <div class="donate-step" id="step2" style="display:none">
+    <div class="donate-stepper container">
+      <div class="stepper-item done"><div class="stepper-dot done">✓</div><div class="stepper-label">Amount</div></div>
+      <div class="stepper-line active"></div>
+      <div class="stepper-item active"><div class="stepper-dot active">2</div><div class="stepper-label">Details</div></div>
+      <div class="stepper-line"></div>
+      <div class="stepper-item"><div class="stepper-dot">3</div><div class="stepper-label">Review</div></div>
+    </div>
+
+    <div class="donate-layout container">
+      <div class="donate-form-card">
+        <h3>Your Details</h3>
+        <p class="form-subtitle">All fields are required to process your donation.</p>
+
+        <div class="form-grid">
+          <div class="field-group">
+            <label class="field-label">First Name <span class="required">*</span></label>
+            <input type="text" id="firstName" placeholder="Chidi" class="field-input" required />
+            <span class="field-error" id="firstNameErr"></span>
+          </div>
+          <div class="field-group">
+            <label class="field-label">Last Name <span class="required">*</span></label>
+            <input type="text" id="lastName" placeholder="Okafor" class="field-input" required />
+            <span class="field-error" id="lastNameErr"></span>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">Email Address <span class="required">*</span></label>
+          <input type="email" id="email" placeholder="chidi.okafor@example.com" class="field-input" required />
+          <span class="field-error" id="emailErr"></span>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">Phone Number <span class="required">*</span></label>
+          <div class="phone-input-wrap">
+            <select id="countryCode" class="country-code-select">
+              <option value="+234">🇳🇬 +234</option>
+              <option value="+1">🇺🇸 +1</option>
+              <option value="+44">🇬🇧 +44</option>
+              <option value="+49">🇩🇪 +49</option>
+              <option value="+33">🇫🇷 +33</option>
+              <option value="+27">🇿🇦 +27</option>
+              <option value="+254">🇰🇪 +254</option>
+              <option value="+233">🇬🇭 +233</option>
+              <option value="+225">🇨🇮 +225</option>
+              <option value="+212">🇲🇦 +212</option>
+              <option value="+20">🇪🇬 +20</option>
+              <option value="+91">🇮🇳 +91</option>
+              <option value="+86">🇨🇳 +86</option>
+              <option value="+81">🇯🇵 +81</option>
+              <option value="+82">🇰🇷 +82</option>
+              <option value="+55">🇧🇷 +55</option>
+              <option value="+52">🇲🇽 +52</option>
+              <option value="+61">🇦🇺 +61</option>
+              <option value="+64">🇳🇿 +64</option>
+              <option value="+971">🇦🇪 +971</option>
+              <option value="+966">🇸🇦 +966</option>
+              <option value="+31">🇳🇱 +31</option>
+              <option value="+39">🇮🇹 +39</option>
+              <option value="+34">🇪🇸 +34</option>
+              <option value="+7">🇷🇺 +7</option>
+            </select>
+            <input type="tel" id="phone" placeholder="800 000 0000" class="field-input phone-number-input" required />
+          </div>
+          <span class="field-error" id="phoneErr"></span>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">Address <span class="required">*</span></label>
+          <input type="text" id="address" placeholder="12 Admiralty Way, Lekki Phase 1, Lagos" class="field-input" required />
+          <span class="field-error" id="addressErr"></span>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">Dedication Message <span class="optional">(optional)</span></label>
+          <textarea id="dedication" placeholder="In memory of... / In honour of..." class="field-textarea" rows="3"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn-back" id="step2Back">← Back</button>
+          <button class="btn-donate-continue" id="step2Next">Continue to Review →</button>
+        </div>
+      </div>
+
+      <div class="donate-sidebar">
+        <div class="amount-summary-card">
+          <div class="amount-summary-label">YOUR DONATION</div>
+          <div class="amount-summary-value" id="step2Amount">₦5,000</div>
+          <div class="amount-summary-type">One-time donation</div>
+        </div>
+        <div class="secure-sanctuary-card">
+          <span class="secure-icon">🛡</span>
+          <div>
+            <div class="secure-title">Secure Sanctuary</div>
+            <p>Your data is encrypted using clinical-grade security standards.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== STEP 3: REVIEW ===== -->
+  <div class="donate-step" id="step3" style="display:none">
+    <div class="donate-step3-header container">
+      <div>
+        <h1 class="serif-heading">Review Your Donation</h1>
+        <p>Please ensure all details are correct before proceeding to the secure payment gateway.</p>
+      </div>
+      <div class="step3-progress">
+        <span>Step 3 of 3</span>
+        <div class="step3-bar"><div class="step3-bar-fill"></div></div>
+      </div>
+    </div>
+
+    <div class="donate-layout container">
+      <div class="review-left">
+
+        <div class="review-card">
+          <div class="review-section">
+            <div class="review-section-label">CONTRIBUTION</div>
+            <div class="review-amount" id="reviewAmount">₦50,000.00</div>
+            <div class="review-type">One-time donation</div>
+          </div>
+          <div class="review-divider-v"></div>
+          <div class="review-section">
+            <div class="review-section-label">DONOR IDENTITY</div>
+            <div class="review-donor-row"><span>👤</span> <span id="reviewName">Chidi Anthony Okafor</span></div>
+            <div class="review-donor-row"><span>✉</span> <span id="reviewEmail">chidi.okafor@example.com</span></div>
+            <div class="review-donor-row"><span>📍</span> <span id="reviewAddress">12 Admiralty Way, Lekki Phase 1, Lagos</span></div>
+          </div>
+        </div>
+
+        <div class="dedication-review-card" id="dedicationReviewCard" style="display:none">
+          <div class="dedication-icon">❝</div>
+          <div>
+            <div class="dedication-label">DEDICATION MESSAGE</div>
+            <p id="reviewDedication"></p>
+          </div>
+        </div>
+
+        <div class="review-actions">
+          <button class="btn-donate-continue" id="step3Next">Continue to Payment →</button>
+          <button class="btn-back" id="step3Back">← Back to Edit</button>
+        </div>
+      </div>
+
+      <div class="review-right">
+        <div class="direct-impact-card">
+          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80" alt="Healthcare worker" class="impact-card-img" />
+          <div class="impact-card-body">
+            <div class="direct-impact-badge">⚡ DIRECT IMPACT</div>
+            <h4>Your <span id="reviewImpactAmount">₦50,000.00</span> makes a difference</h4>
+            <div class="impact-item-row">
+              <div class="impact-item-icon" style="background:#e8f5f3">🏥</div>
+              <div>
+                <div class="impact-item-title">Critical Supplies</div>
+                <div class="impact-item-desc">Funds prenatal vitamins for 25 expectant mothers in rural clinics.</div>
+              </div>
+            </div>
+            <div class="impact-item-row">
+              <div class="impact-item-icon" style="background:#eff6ff">💉</div>
+              <div>
+                <div class="impact-item-title">Immunization</div>
+                <div class="impact-item-desc">Covers full vaccination cycles for 10 newborns this month.</div>
+              </div>
+            </div>
+            <p class="impact-guarantee">Hopewell Healthcare ensures 100% of individual donations go directly to clinical services and patient support.</p>
+          </div>
+        </div>
+        <div class="secure-badge-card">
+          <span>🛡</span> Secure 256-bit Encrypted Transaction
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== STEP 4: PAYMENT ===== -->
+  <div class="donate-step" id="step4" style="display:none">
+    <div class="payment-progress-bar">
+      <div class="payment-progress-fill"></div>
+    </div>
+
+    <div class="payment-layout container">
+      <div class="payment-left">
+        <h2>Secure Payment</h2>
+        <p>Your contribution directly supports our clinical outreach programs. Every transaction is encrypted and processed through our secure medical-grade financial gateway.</p>
+
+        <div class="contribution-summary">
+          <div class="contribution-label">CONTRIBUTION AMOUNT</div>
+          <div class="contribution-amount" id="paymentAmount">₦50,000.00</div>
+          <div class="contribution-meta">
+            <div class="contribution-meta-row">
+              <span>Transaction ID</span>
+              <span id="transactionId">#HPW-0000-X</span>
+            </div>
+            <div class="contribution-meta-row">
+              <span>Program</span>
+              <span>Healthcare Equity Fund</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="security-badges">
+          <div class="security-badge-item">
+            <span>🛡</span>
+            <div>
+              <div class="sec-badge-title">SSL SECURED</div>
+              <div class="sec-badge-sub">256-bit Encryption</div>
+            </div>
+          </div>
+          <div class="security-badge-item">
+            <span>✓</span>
+            <div>
+              <div class="sec-badge-title">PCI-DSS</div>
+              <div class="sec-badge-sub">Compliant Gateway</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="payment-right">
+        <div class="payment-form-card">
+          <div class="field-group">
+            <label class="field-label">Cardholder Name <span class="required">*</span></label>
+            <input type="text" id="cardName" placeholder="John Doe" class="field-input" />
+            <span class="field-error" id="cardNameErr"></span>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label">Card Number <span class="required">*</span></label>
+            <div class="card-input-wrap">
+              <input type="text" id="cardNumber" placeholder="0000 0000 0000 0000" class="field-input card-number-input" maxlength="19" />
+              <div class="card-icons">
+                <span class="card-icon-visa">VISA</span>
+                <span class="card-icon-mc">MC</span>
+              </div>
+            </div>
+            <span class="field-error" id="cardNumberErr"></span>
+          </div>
+
+          <div class="form-grid">
+            <div class="field-group">
+              <label class="field-label">Expiry Date <span class="required">*</span></label>
+              <div class="expiry-wrap">
+                <select id="expiryMonth" class="field-input expiry-select">
+                  <option value="">MM</option>
+                  <option value="01">01 - Jan</option>
+                  <option value="02">02 - Feb</option>
+                  <option value="03">03 - Mar</option>
+                  <option value="04">04 - Apr</option>
+                  <option value="05">05 - May</option>
+                  <option value="06">06 - Jun</option>
+                  <option value="07">07 - Jul</option>
+                  <option value="08">08 - Aug</option>
+                  <option value="09">09 - Sep</option>
+                  <option value="10">10 - Oct</option>
+                  <option value="11">11 - Nov</option>
+                  <option value="12">12 - Dec</option>
+                </select>
+                <span class="expiry-slash">/</span>
+                <select id="expiryYear" class="field-input expiry-select">
+                  <option value="">YY</option>
+                  <option value="26">2026</option>
+                  <option value="27">2027</option>
+                  <option value="28">2028</option>
+                  <option value="29">2029</option>
+                  <option value="30">2030</option>
+                  <option value="31">2031</option>
+                  <option value="32">2032</option>
+                  <option value="33">2033</option>
+                  <option value="34">2034</option>
+                  <option value="35">2035</option>
+                </select>
+              </div>
+              <span class="field-error" id="expiryErr"></span>
+            </div>
+            <div class="field-group">
+              <label class="field-label">CVV <span class="required">*</span></label>
+              <div class="cvv-wrap">
+                <input type="password" id="cvv" placeholder="•••" class="field-input" maxlength="4" />
+                <button class="cvv-toggle" id="cvvToggle" type="button" aria-label="Show CVV">👁</button>
+              </div>
+              <span class="field-error" id="cvvErr"></span>
+            </div>
+          </div>
+
+          <button class="btn-complete-donation" id="completeDonation">Complete Donation →</button>
+          <button class="btn-back-full" id="step4Back">Back</button>
+
+          <p class="payment-consent">By clicking "Complete Donation", you authorize Hopewell Healthcare to charge your selected payment method for the amount of <span id="consentAmount">₦50,000.00</span>.</p>
+        </div>
+
+        <div class="clinical-protection-notice">
+          <span>✅</span>
+          <p><strong>Clinical-Grade Protection:</strong> Your payment information is never stored on our servers. All data is tokenized through our PCI-DSS Level 1 certified partner.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== STEP 5: SUCCESS ===== -->
+  <div class="donate-step" id="step5" style="display:none">
+
+    <!-- THANK YOU HERO BANNER -->
+    <div class="success-hero">
+      <img src="images/ThankYou.jpg" alt="Thank You" class="success-hero-img" />
+      <div class="success-hero-overlay"></div>
+      <div class="success-hero-content">
+        <div class="success-hero-icon">🤝</div>
+        <h1 class="serif-heading">Thank You</h1>
+        <p>Your kindness creates a sanctuary for those in need. We are deeply grateful for your support.</p>
+      </div>
+    </div>
+
+    <!-- DETAILS SECTION -->
+    <div class="success-details container">
+
+      <!-- LEFT: IMPACT -->
+      <div class="success-impact-card">
+        <div class="immediate-impact-badge">IMMEDIATE IMPACT</div>
+        <h2 id="successImpactHeading">Your contribution of ₦5,000 will provide 10 health kits.</h2>
+        <p>These kits include essential medical supplies, hygiene products, and preventative care materials that will be delivered to our community outreach centers by the end of the week.</p>
+        <div class="success-cta-row">
+          <a href="dashboard.html" class="btn btn-teal">Return to Dashboard →</a>
+          <a href="stories.html" class="btn btn-outline-dark">View Success Stories</a>
+        </div>
+      </div>
+
+      <!-- RIGHT: TRANSACTION + IMAGE -->
+      <div class="success-right">
+        <div class="transaction-card">
+          <div class="transaction-title">TRANSACTION DETAILS</div>
+          <div class="transaction-row">
+            <div class="transaction-label">Transaction ID</div>
+            <div class="transaction-value" id="successRef">#HPW-0000-X</div>
+          </div>
+          <div class="transaction-row">
+            <div class="transaction-label">Date</div>
+            <div class="transaction-value" id="successDate"></div>
+          </div>
+          <div class="transaction-row">
+            <div class="transaction-label">Payment Method</div>
+            <div class="transaction-value" id="successPayment">Card •••• ----</div>
+          </div>
+          <a href="#" class="download-receipt-link" onclick="window.print();return false;">🧾 Download Tax Receipt</a>
+        </div>
+
+        <div class="success-image-card">
+          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80" alt="Healthcare worker" />
+          <div class="success-image-caption">Because of you, more hearts are healing.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="donate-footer">
+    <div class="donate-footer-inner">
+      <div>
+        <div class="donate-footer-brand">Hopewell Healthcare</div>
+        <p>© 2024 Hopewell Healthcare. A Clinical Sanctuary for all.</p>
+      </div>
+      <div class="donate-footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Annual Report</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/donate.js"></script>
+</body>
+</html>

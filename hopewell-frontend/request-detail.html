@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request Detail — HopeWell</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/request-detail.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body class="detail-body">
+
+  <!-- TOP NAV -->
+  <header class="detail-topbar">
+    <div class="detail-topbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <div class="logo-icon">H</div>
+        <span>Hopewell Healthcare</span>
+      </a>
+      <nav class="detail-topnav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="requests.html" class="active">Assistance Requests</a>
+        <a href="#">Clinical Teams</a>
+      </nav>
+      <div class="detail-topbar-actions">
+        <button class="icon-btn">🔔</button>
+        <div class="topbar-avatar">J</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="detail-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="detail-sidebar">
+      <div class="detail-sidebar-brand">
+        <div class="dsb-title">Clinical Portal</div>
+        <div class="dsb-sub">Sanctuary Access</div>
+      </div>
+      <nav class="detail-sidebar-nav">
+        <a href="dashboard.html" class="dsb-link">
+          <span>⊞</span> Dashboard
+        </a>
+        <a href="requests.html" class="dsb-link active">
+          <span>🏥</span> Assistance Requests
+        </a>
+        <a href="#" class="dsb-link">
+          <span>👥</span> Clinical Teams
+        </a>
+        <a href="#" class="dsb-link">
+          <span>📋</span> Patient Records
+        </a>
+        <a href="#" class="dsb-link">
+          <span>⚙</span> Settings
+        </a>
+      </nav>
+      <div class="detail-sidebar-bottom">
+        <a href="requests.html" class="btn btn-teal" style="width:100%;justify-content:center">
+          + New Request
+        </a>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="detail-main" id="detailMain">
+      <div class="loading-state"><div class="spinner"></div><p>Loading request...</p></div>
+    </main>
+
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/request-detail.js"></script>
+</body>
+</html>

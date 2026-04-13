@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Volunteer Application — HopeWell</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/volunteer.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+</head>
+<body class="vol-body">
+
+  <!-- STEP 1 NAV -->
+  <nav class="vol-nav" id="volNav">
+    <div class="vol-nav-inner">
+      <a href="index.html" class="navbar-logo">
+        <div class="logo-icon">H</div>
+        <span>Hopewell Healthcare</span>
+      </a>
+      <div class="navbar-links">
+        <a href="#">Find Care</a>
+        <a href="#">Our Mission</a>
+        <a href="#">Resources</a>
+        <a href="volunteer.html" class="active">Volunteer</a>
+      </div>
+      <a href="#" class="btn btn-teal">Sign In</a>
+    </div>
+  </nav>
+
+  <!-- PORTAL NAV (steps 2-6) -->
+  <nav class="vol-portal-nav" id="portalNav" style="display:none">
+    <div class="vol-nav-inner">
+      <div class="portal-brand">
+        <div class="logo-icon">H</div>
+        <div>
+          <div class="portal-brand-name">Volunteer Portal</div>
+          <div class="portal-brand-sub">HOPEWELL HEALTHCARE</div>
+        </div>
+      </div>
+      <div class="portal-nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="volunteer.html" class="active">Volunteer Application</a>
+        <a href="#">Resources</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== STEP 1: ROLE SELECTION ===== -->
+  <div class="vol-step" id="vstep1">
+    <div class="step1-hero">
+      <div class="step1-hero-left">
+        <h1 class="serif-heading">Healing Hands,<br><span class="teal-text">Global Impact.</span></h1>
+        <p>Join our mission to provide high-quality healthcare to underserved communities. Your expertise can change lives.</p>
+      </div>
+      <div class="step1-progress-card">
+        <div class="spc-header">
+          <span class="spc-step">STEP 1 OF 6</span>
+          <span class="spc-pct">17% Complete</span>
+        </div>
+        <div class="spc-item active"><div class="spc-dot active">1</div> Your role</div>
+        <div class="spc-item"><div class="spc-dot">2</div> Personal info</div>
+        <div class="spc-item"><div class="spc-dot">3</div> Experience</div>
+        <div class="spc-item"><div class="spc-dot">4</div> Availability</div>
+        <div class="spc-item"><div class="spc-dot">5</div> Preferences</div>
+        <div class="spc-item"><div class="spc-dot">6</div> Review</div>
+      </div>
+    </div>
+
+    <div class="step1-body container">
+      <div class="step1-main">
+        <h2>Choose your volunteer role</h2>
+        <p class="step-subtitle">Select the position that best matches your professional background and skills.</p>
+        <div class="role-grid" id="roleGrid">
+          <div class="role-card" data-role="Doctor / Physician">
+            <div class="role-icon">🩺</div>
+            <div><div class="role-name">Doctor / Physician</div><div class="role-desc">Clinical practice, diagnostics, and patient treatment.</div></div>
+          </div>
+          <div class="role-card" data-role="Nurse / Midwife">
+            <div class="role-icon">🏥</div>
+            <div><div class="role-name">Nurse / Midwife</div><div class="role-desc">Patient care, maternal health, and clinical support.</div></div>
+          </div>
+          <div class="role-card" data-role="Pharmacist">
+            <div class="role-icon">💊</div>
+            <div><div class="role-name">Pharmacist</div><div class="role-desc">Medication management and pharmaceutical supply.</div></div>
+          </div>
+          <div class="role-card" data-role="Community Health Worker">
+            <div class="role-icon">👥</div>
+            <div><div class="role-name">Community Health Worker</div><div class="role-desc">Field outreach, education, and primary screening.</div></div>
+          </div>
+          <div class="role-card" data-role="Non-health Support">
+            <div class="role-icon">📋</div>
+            <div><div class="role-name">Non-health Support</div><div class="role-desc">Logistics, administration, and facility management.</div></div>
+          </div>
+          <div class="role-card" data-role="IT / Tech Support">
+            <div class="role-icon">💻</div>
+            <div><div class="role-name">IT / Tech Support</div><div class="role-desc">Digital infrastructure, data systems, and hardware.</div></div>
+          </div>
+          <div class="role-card role-card-full" data-role="Fundraising / Comms">
+            <div class="role-icon">📣</div>
+            <div><div class="role-name">Fundraising / Comms</div><div class="role-desc">Resource mobilization, storytelling, and public relations.</div></div>
+          </div>
+        </div>
+        <button class="btn-vol-continue" id="vstep1Next">Continue →</button>
+      </div>
+
+      <div class="step1-sidebar">
+        <div class="your-application-card">
+          <h4>Your Application</h4>
+          <div class="no-role-selected" id="rolePreview">
+            <div class="no-role-icon">👤</div>
+            <div class="no-role-text">No role selected</div>
+            <div class="no-role-sub">Select a role from the grid to see requirements</div>
+          </div>
+        </div>
+        <div class="currently-needed-card">
+          <div class="cn-title">● CURRENTLY NEEDED</div>
+          <div class="cn-item"><div><div class="cn-name">Nurses</div><div class="cn-loc">Kano State Center</div></div><span class="cn-badge">URGENT</span></div>
+          <div class="cn-item"><div><div class="cn-name">CHW Lead</div><div class="cn-loc">Rivers Division</div></div><span class="cn-badge">URGENT</span></div>
+          <div class="cn-item"><div><div class="cn-name">Pediatricians</div><div class="cn-loc">Lagos Central</div></div><span class="cn-badge">URGENT</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step1-stats">
+      <div class="container step1-stats-inner">
+        <div class="stat-item"><div class="stat-num">1,200+</div><div class="stat-lbl">ACTIVE VOLUNTEERS</div></div>
+        <div class="stat-item"><div class="stat-num">45</div><div class="stat-lbl">GLOBAL CENTERS</div></div>
+        <div class="stat-item"><div class="stat-num">850k</div><div class="stat-lbl">PATIENTS SERVED</div></div>
+        <div class="stat-item"><div class="stat-num">24/7</div><div class="stat-lbl">CRITICAL CARE</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== STEP 2: PERSONAL INFO ===== -->
+  <div class="vol-step vol-portal-layout" id="vstep2" style="display:none">
+    <aside class="vol-sidebar">
+      <div class="vsb-brand"><div class="logo-icon">H</div><div><div class="vsb-name">Volunteer Portal</div></div></div>
+      <div class="vsb-progress-label">APPLICATION PROGRESS</div>
+      <div class="vsb-progress-bar"><div class="vsb-progress-fill" style="width:33%"></div></div>
+      <nav class="vsb-nav">
+        <div class="vsb-link done" onclick="showVolStep(1)"><span class="vsb-icon">✅</span> Your Role</div>
+        <div class="vsb-link active"><span class="vsb-icon">👤</span> Personal Info</div>
+        <div class="vsb-link"><span class="vsb-icon">💼</span> Experience</div>
+        <div class="vsb-link"><span class="vsb-icon">📅</span> Availability</div>
+        <div class="vsb-link"><span class="vsb-icon">⚙</span> Preferences</div>
+        <div class="vsb-link"><span class="vsb-icon">📋</span> Review</div>
+      </nav>
+      <div class="vsb-bottom">
+        <button class="vsb-save-draft">💾 Save Draft</button>
+      </div>
+    </aside>
+    <main class="vol-main">
+      <div class="vol-step-tag">STEP 02 OF 06</div>
+      <h1 class="serif-heading">Tell us about<br><span class="teal-text">yourself.</span></h1>
+      <p class="step-subtitle">Your professional background helps us match you with clinical and administrative roles where your expertise can make the greatest impact.</p>
+
+      <div class="vol-form-card step2-card">
+        <div class="step2-grid">
+          <div class="step2-field">
+            <label class="step2-label">Full Name</label>
+            <input type="text" id="vFullName" placeholder="Chukwudi Adebayo" class="step2-input" />
+            <span class="field-error" id="vFullNameErr"></span>
+          </div>
+          <div class="step2-field">
+            <label class="step2-label">Email Address</label>
+            <input type="email" id="vEmail" placeholder="c.adebayo@healthmail.ng" class="step2-input" />
+            <span class="field-error" id="vEmailErr"></span>
+          </div>
+        </div>
+
+        <div class="step2-grid">
+          <div class="step2-field">
+            <label class="step2-label">Phone Number</label>
+            <div class="step2-phone-wrap">
+              <select class="step2-country-code">
+                <option value="+234">+234</option>
+                <option value="+1">+1</option>
+                <option value="+44">+44</option>
+                <option value="+27">+27</option>
+                <option value="+254">+254</option>
+                <option value="+233">+233</option>
+                <option value="+49">+49</option>
+                <option value="+33">+33</option>
+                <option value="+91">+91</option>
+              </select>
+              <input type="tel" id="vPhone" placeholder="803 123 4567" class="step2-input step2-phone-input" />
+            </div>
+            <span class="field-error" id="vPhoneErr"></span>
+          </div>
+          <div class="step2-field">
+            <label class="step2-label">Residential State</label>
+            <select id="vState" class="step2-input step2-select">
+              <option value="">Select state</option>
+              <option>Lagos</option><option>Kano</option><option>Abuja (FCT)</option><option>Rivers</option><option>Oyo</option><option>Kaduna</option><option>Anambra</option><option>Enugu</option><option>Delta</option><option>Borno</option><option>Kwara</option><option>Ogun</option><option>Ondo</option><option>Osun</option><option>Ekiti</option><option>Katsina</option><option>Sokoto</option><option>Zamfara</option><option>Kebbi</option><option>Niger</option><option>Plateau</option><option>Benue</option><option>Nassarawa</option><option>Kogi</option><option>Taraba</option><option>Adamawa</option><option>Gombe</option><option>Bauchi</option><option>Yobe</option><option>Jigawa</option><option>Ebonyi</option><option>Imo</option><option>Abia</option><option>Cross River</option><option>Akwa Ibom</option><option>Bayelsa</option><option>Edo</option>
+            </select>
+            <span class="field-error" id="vStateErr"></span>
+          </div>
+        </div>
+
+        <div class="step2-field">
+          <label class="step2-label">Current Profession / Title</label>
+          <input type="text" id="vProfession" placeholder="Senior Medical Officer" class="step2-input" />
+          <span class="field-error" id="vProfessionErr"></span>
+        </div>
+
+        <div class="step2-field">
+          <label class="step2-label">Brief Professional Bio <span class="optional">(optional)</span></label>
+          <textarea id="vBio" placeholder="Share a few sentences about your healthcare experience and what motivates you to volunteer with Hopewell..." class="step2-textarea" rows="4"></textarea>
+        </div>
+      </div>
+
+      <div class="vol-nav-actions">
+        <button class="btn-vol-back" id="vstep2Back">← Back to Role Selection</button>
+        <button class="btn-vol-continue" id="vstep2Next" onclick="handleStep2Next()">Continue to Experience →</button>
+      </div>
+
+      <div class="vol-trust-row">
+        <div class="vol-trust-item">
+          <div class="vol-trust-icon">🛡</div>
+          <div><div class="vt-title">Data Privacy</div><p>Your information is encrypted and only accessible to our clinical vetting team.</p></div>
+        </div>
+        <div class="vol-trust-item">
+          <div class="vol-trust-icon">💬</div>
+          <div><div class="vt-title">Need Assistance?</div><p>Contact our volunteer support at help@hopewell.org for application queries.</p></div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- ===== STEP 3: EXPERIENCE ===== -->
+  <div class="vol-step vol-portal-layout" id="vstep3" style="display:none">
+    <aside class="vol-sidebar">
+      <div class="vsb-brand"><div class="logo-icon">H</div><div><div class="vsb-name">Volunteer Portal</div><div class="vsb-sub">HOPEWELL HEALTHCARE</div></div></div>
+      <div class="vsb-progress-label">Application Progress</div>
+      <div class="vsb-progress-bar"><div class="vsb-progress-fill" style="width:50%"></div></div>
+      <div class="vsb-pct">50%</div>
+      <nav class="vsb-nav">
+        <div class="vsb-link done" onclick="showVolStep(1)"><span class="vsb-icon">✅</span> Role Selection</div>
+        <div class="vsb-link done" onclick="showVolStep(2)"><span class="vsb-icon">✅</span> Personal Info</div>
+        <div class="vsb-link active"><span class="vsb-icon">💼</span> Experience</div>
+        <div class="vsb-link"><span class="vsb-icon">📅</span> Availability</div>
+        <div class="vsb-link"><span class="vsb-icon">⚙</span> Preferences</div>
+        <div class="vsb-link"><span class="vsb-icon">📋</span> Review</div>
+      </nav>
+      <div class="vsb-bottom">
+        <button class="vsb-save-draft">💾 Save Draft</button>
+      </div>
+    </aside>
+    <main class="vol-main">
+      <h1 class="serif-heading">Your Professional Background</h1>
+      <p class="step-subtitle">Help us understand your clinical or administrative expertise to match you with the right mission.</p>
+      <div class="exp-form">
+        <div class="step2-grid">
+          <div class="step2-field">
+            <label class="exp-label">PRIMARY MEDICAL/PROFESSIONAL CERTIFICATION</label>
+            <input type="text" id="vCert" placeholder="e.g., MD, RN, Pharmacist License" class="step2-input" />
+            <span class="field-error" id="vCertErr"></span>
+          </div>
+          <div class="step2-field">
+            <label class="exp-label">YEARS OF EXPERIENCE</label>
+            <select id="vYears" class="step2-input step2-select">
+              <option value="">Select range</option>
+              <option>Less than 1 year</option><option>1-3 years</option><option>4-7 years</option><option>8-15 years</option><option>15+ years</option>
+            </select>
+            <span class="field-error" id="vYearsErr"></span>
+          </div>
+        </div>
+        <div class="step2-grid">
+          <div class="step2-field">
+            <label class="exp-label">CURRENT OR MOST RECENT EMPLOYER/CLINIC</label>
+            <input type="text" id="vEmployer" placeholder="Institution Name" class="step2-input" />
+          </div>
+          <div class="step2-field">
+            <label class="exp-label">HIGHEST LEVEL OF EDUCATION</label>
+            <select id="vEducation" class="step2-input step2-select">
+              <option value="">Select degree</option>
+              <option>MBBS / MBChB</option><option>BSc Nursing</option><option>B.Pharm</option><option>MPH</option><option>PhD</option><option>HND / OND</option><option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="exp-skills-section">
+          <div class="exp-skills-title">&#11088; SPECIALIZED SKILLS</div>
+          <div class="skills-grid" id="skillsGrid">
+            <button class="skill-tag" data-skill="Surgery">Surgery</button>
+            <button class="skill-tag" data-skill="Pediatrics">Pediatrics</button>
+            <button class="skill-tag" data-skill="Emergency Care">Emergency Care</button>
+            <button class="skill-tag" data-skill="Logistics">Logistics</button>
+            <button class="skill-tag" data-skill="Data Entry">Data Entry</button>
+            <button class="skill-tag" data-skill="Patient Counseling">Patient Counseling</button>
+            <button class="skill-tag" data-skill="Maternal Health">Maternal Health</button>
+            <button class="skill-tag" data-skill="Vaccination">Vaccination</button>
+            <button class="skill-tag" data-skill="Lab Science">Lab Science</button>
+          </div>
+        </div>
+        <div class="step2-field">
+          <label class="exp-label">PREVIOUS VOLUNTEER EXPERIENCE</label>
+          <textarea id="vVolExp" placeholder="Briefly describe any previous healthcare or NGO volunteer work." class="step2-textarea" rows="4"></textarea>
+        </div>
+      </div>
+      <div class="vol-nav-actions">
+        <button class="btn-vol-back" id="vstep3Back">&#8592; Back to Personal Info</button>
+        <button class="btn-vol-continue" id="vstep3Next">Continue to Availability &#8594;</button>
+      </div>
+      <div class="exp-why-matters">
+        <div class="exp-why-text">
+          <h4>Why this matters?</h4>
+          <p>Your professional history allows our Clinical Matching Algorithm to place you in high-impact zones where your specific license and skills can save the most lives.</p>
+        </div>
+        <div class="exp-why-img">
+          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&q=80" alt="Healthcare professional" />
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- ===== STEP 4: AVAILABILITY ===== -->
+  <div class="vol-step" id="vstep4" style="display:none">
+    <div class="avail-page-layout">
+      <aside class="avail-page-sidebar">
+        <div class="avail-sb-title">Volunteer Portal</div>
+        <div class="avail-sb-sub">Application Progress</div>
+        <div class="vsb-progress-bar" style="margin:0.5rem 0 0.25rem"><div class="vsb-progress-fill" style="width:67%"></div></div>
+        <nav class="avail-sb-nav">
+          <div class="avail-sb-link done" onclick="showVolStep(1)" style="cursor:pointer">&#10003; Role Selection</div>
+          <div class="avail-sb-link done" onclick="showVolStep(2)" style="cursor:pointer">&#10003; Personal Info</div>
+          <div class="avail-sb-link done" onclick="showVolStep(3)" style="cursor:pointer">&#10003; Experience</div>
+          <div class="avail-sb-link active">&#128197; Availability</div>
+          <div class="avail-sb-link">&#9881; Preferences</div>
+          <div class="avail-sb-link">&#128203; Review</div>
+        </nav>
+        <div class="vsb-bottom">
+          <button class="vsb-save-draft">Save Draft</button>
+        </div>
+      </aside>
+
+      <main class="avail-main">
+        <div class="vol-step-tag">STEP 4 OF 6</div>
+        <h1 class="serif-heading">Your Availability</h1>
+        <p class="step-subtitle">Please indicate when you are able to support our clinical teams. We aim for consistency to provide the best care for our patients.</p>
+
+        <!-- SCHEDULE CARD -->
+        <div class="avail-schedule-card">
+          <div class="avail-schedule-header">
+            <h4>Weekly Schedule</h4>
+            <div class="avail-legend">
+              <span class="legend-dot available"></span> Available
+              <span class="legend-dot selected"></span> Selected
+            </div>
+          </div>
+          <div class="avail-grid">
+            <div class="avail-grid-corner"></div>
+            <div class="avail-day-header">MON</div>
+            <div class="avail-day-header">TUE</div>
+            <div class="avail-day-header">WED</div>
+            <div class="avail-day-header">THU</div>
+            <div class="avail-day-header">FRI</div>
+            <div class="avail-day-header avail-sat">SAT</div>
+            <div class="avail-time-label">Morning</div>
+            <div class="avail-cell" data-day="mon" data-time="morning"></div>
+            <div class="avail-cell" data-day="tue" data-time="morning"></div>
+            <div class="avail-cell" data-day="wed" data-time="morning"></div>
+            <div class="avail-cell" data-day="thu" data-time="morning"></div>
+            <div class="avail-cell" data-day="fri" data-time="morning"></div>
+            <div class="avail-cell" data-day="sat" data-time="morning"></div>
+            <div class="avail-time-label">Afternoon</div>
+            <div class="avail-cell" data-day="mon" data-time="afternoon"></div>
+            <div class="avail-cell" data-day="tue" data-time="afternoon"></div>
+            <div class="avail-cell" data-day="wed" data-time="afternoon"></div>
+            <div class="avail-cell" data-day="thu" data-time="afternoon"></div>
+            <div class="avail-cell" data-day="fri" data-time="afternoon"></div>
+            <div class="avail-cell" data-day="sat" data-time="afternoon"></div>
+            <div class="avail-time-label">Evening</div>
+            <div class="avail-cell" data-day="mon" data-time="evening"></div>
+            <div class="avail-cell" data-day="tue" data-time="evening"></div>
+            <div class="avail-cell" data-day="wed" data-time="evening"></div>
+            <div class="avail-cell" data-day="thu" data-time="evening"></div>
+            <div class="avail-cell" data-day="fri" data-time="evening"></div>
+            <div class="avail-cell" data-day="sat" data-time="evening"></div>
+          </div>
+        </div>
+
+        <!-- HOURS + DATE -->
+        <div class="avail-bottom-grid">
+          <div class="avail-hours-card">
+            <label class="exp-label">Total Hours per Week</label>
+            <div class="avail-hours-wrap">
+              <input type="number" id="vHours" placeholder="e.g. 15" class="step2-input avail-hours-input" min="1" max="60" />
+              <span class="avail-hours-unit">hours</span>
+            </div>
+          </div>
+          <div class="avail-date-card">
+            <label class="exp-label">Preferred Start Date</label>
+            <div class="avail-date-wrap">
+              <input type="date" id="vStartDate" class="step2-input" />
+            </div>
+          </div>
+        </div>
+
+        <div class="vol-nav-actions">
+          <button class="btn-vol-back" id="vstep4Back">&#8592; Back to Experience</button>
+          <button class="btn-vol-continue" id="vstep4Next">Continue to Preferences &#8594;</button>
+        </div>
+      </main>
+
+      <!-- RIGHT SIDEBAR -->
+      <aside class="avail-right-sidebar">
+        <div class="avail-why-card">
+          <div class="avail-why-icon-wrap">&#8505;</div>
+          <h4>Why this matters</h4>
+          <p>Clinical staffing in Nigeria faces significant seasonal fluctuations. Your availability helps us ensure that our primary care centers remain operational during peak demand periods.</p>
+          <div class="avail-why-point">
+            <span class="avail-why-star">&#10022;</span>
+            <div>
+              <div class="avail-why-point-title">RESOURCE ALLOCATION</div>
+              <p>Helps us match specialized staff to the areas with highest patient density.</p>
+            </div>
+          </div>
+          <div class="avail-why-point">
+            <span class="avail-why-star">&#10022;</span>
+            <div>
+              <div class="avail-why-point-title">CONTINUITY OF CARE</div>
+              <p>Patients recover better when they see familiar faces in the clinic.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="avail-privacy-card">
+          <span>&#128274;</span>
+          <div>
+            <div class="avail-privacy-title">Privacy Commitment</div>
+            <p>Your availability data is used strictly for scheduling and is never shared with third-party partners without explicit consent.</p>
+          </div>
+        </div>
+
+        <div class="avail-image-card">
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&q=80" alt="Clinical staffing" />
+          <div class="avail-image-caption">Hopewell is dedicated to providing 24/7 care across our network.</div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- ===== STEP 5: PREFERENCES ===== -->
+  <div class="vol-step" id="vstep5" style="display:none">
+    <div class="pref-layout">
+      <!-- SIDEBAR -->
+      <aside class="pref-sidebar">
+        <div class="pref-sb-brand">
+          <div class="logo-icon">H</div>
+          <div>
+            <div class="pref-sb-name">Hopewell</div>
+            <div class="pref-sb-sub">CLINICAL SANCTUARY</div>
+            <div class="pref-sb-progress">Application Progress &bull; Step 5 of 6</div>
+          </div>
+        </div>
+        <nav class="pref-sb-nav">
+          <div class="pref-sb-link done" onclick="showVolStep(1)" style="cursor:pointer"><span>&#128100;</span> Role Selection</div>
+          <div class="pref-sb-link done" onclick="showVolStep(2)" style="cursor:pointer"><span>&#128100;</span> Personal Info</div>
+          <div class="pref-sb-link done" onclick="showVolStep(3)" style="cursor:pointer"><span>&#128188;</span> Professional Experience</div>
+          <div class="pref-sb-link done" onclick="showVolStep(4)" style="cursor:pointer"><span>&#128197;</span> Availability</div>
+          <div class="pref-sb-link active"><span>&#9881;</span> Preferences</div>
+          <div class="pref-sb-link"><span>&#128203;</span> Review</div>
+        </nav>
+        <div class="vsb-bottom">
+          <button class="vsb-save-draft">&#128190; Save Draft</button>
+        </div>
+      </aside>
+
+      <!-- MAIN -->
+      <main class="pref-main">
+        <div class="vol-step-tag">PHASE 05</div>
+        <h1 class="serif-heading">Define Your <span class="teal-text">Impact.</span></h1>
+        <p class="step-subtitle">We believe clinical excellence starts with personal alignment. Select your areas of focus and regional preferences so we can match you with the most meaningful missions in Nigeria.</p>
+
+        <!-- FOCUS AREAS -->
+        <div class="pref-section-row">
+          <h4>Focus Areas</h4>
+          <span class="pref-select-all">Select all that apply</span>
+        </div>
+        <div class="pref-focus-grid" id="focusAreasGrid">
+          <div class="pref-focus-card" data-focus="Maternal Health">
+            <div class="pfc-top">
+              <div class="pfc-icon" style="background:#eef2fb">&#129328;</div>
+              <input type="checkbox" class="pfc-check fac-check" />
+            </div>
+            <div class="pfc-name">Maternal Health</div>
+            <p>Prenatal care, safe delivery, and postnatal support in rural communities.</p>
+          </div>
+          <div class="pref-focus-card" data-focus="Emergency Response">
+            <div class="pfc-top">
+              <div class="pfc-icon" style="background:#eef2fb">&#10013;</div>
+              <input type="checkbox" class="pfc-check fac-check" />
+            </div>
+            <div class="pfc-name">Emergency Response</div>
+            <p>Rapid deployment for disaster relief and acute medical crisis management.</p>
+          </div>
+          <div class="pref-focus-card" data-focus="Infectious Diseases">
+            <div class="pfc-top">
+              <div class="pfc-icon" style="background:#eef2fb">&#129440;</div>
+              <input type="checkbox" class="pfc-check fac-check" />
+            </div>
+            <div class="pfc-name">Infectious Diseases</div>
+            <p>Epidemiology, containment, and clinical treatment of transmissible illnesses.</p>
+          </div>
+        </div>
+
+        <!-- REGIONAL DEPLOYMENT -->
+        <div class="pref-regional-wrap">
+          <div class="pref-regional-left">
+            <h4>Regional Deployment</h4>
+            <p>Select the geographical regions in Nigeria where you are comfortable being stationed. Consider language and travel logistics.</p>
+            <div class="pref-regional-img">
+              <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=300&q=80" alt="Nigeria regions" />
+            </div>
+          </div>
+          <div class="pref-regions-grid" id="regionsGrid">
+            <div class="pref-region-card" data-region="Southwest">
+              <input type="checkbox" class="region-check pref-region-check" />
+              <div class="pref-region-name">Southwest</div>
+              <div class="pref-region-states">Lagos, Ibadan, Ogun</div>
+            </div>
+            <div class="pref-region-card" data-region="North">
+              <input type="checkbox" class="region-check pref-region-check" />
+              <div class="pref-region-name">North</div>
+              <div class="pref-region-states">Kano, Kaduna, Maiduguri</div>
+            </div>
+            <div class="pref-region-card" data-region="Southeast">
+              <input type="checkbox" class="region-check pref-region-check" />
+              <div class="pref-region-name">Southeast</div>
+              <div class="pref-region-states">Enugu, Anambra, Imo</div>
+            </div>
+            <div class="pref-region-card" data-region="South South">
+              <input type="checkbox" class="region-check pref-region-check" />
+              <div class="pref-region-name">South South</div>
+              <div class="pref-region-states">Rivers, Delta, Bayelsa</div>
+            </div>
+            <div class="pref-region-card" data-region="North Central">
+              <input type="checkbox" class="region-check pref-region-check" />
+              <div class="pref-region-name">North Central</div>
+              <div class="pref-region-states">Abuja, Benue, Plateau</div>
+            </div>
+            <div class="pref-region-card" data-region="Northeast">
+              <input type="checkbox" class="region-check pref-region-check" />
+              <div class="pref-region-name">Northeast</div>
+              <div class="pref-region-states">Borno, Adamawa, Gombe</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="vol-nav-actions">
+          <button class="btn-vol-back" id="vstep5Back">&#8592; Back to Availability</button>
+          <button class="btn-vol-continue" id="vstep5Next">Continue to Review &#8594;</button>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- ===== STEP 6: REVIEW ===== -->
+  <div class="vol-step vol-portal-layout" id="vstep6" style="display:none">
+    <aside class="vol-sidebar">
+      <div class="vsb-brand"><div class="logo-icon">H</div><div><div class="vsb-name">Application Portal</div><div class="vsb-sub">Healthcare NGO Nigeria</div></div></div>
+      <nav class="vsb-nav">
+        <div class="vsb-link done" onclick="showVolStep(1)" style="cursor:pointer">✅ Role Selection</div>
+        <div class="vsb-link done" onclick="showVolStep(2)" style="cursor:pointer">✅ Personal Info</div>
+        <div class="vsb-link done" onclick="showVolStep(3)" style="cursor:pointer">✅ Professional</div>
+        <div class="vsb-link done" onclick="showVolStep(4)" style="cursor:pointer">✅ Availability</div>
+        <div class="vsb-link done" onclick="showVolStep(5)" style="cursor:pointer">✅ Preferences</div>
+        <div class="vsb-link active">📋 Review</div>
+      </nav>
+      <div class="vsb-bottom">
+        <button class="vsb-save-draft">💾 Save Draft</button>
+      </div>
+    </aside>
+    <main class="vol-main">
+      <div class="vol-step-tag">STEP 6 OF 6</div>
+      <h1 class="serif-heading">Review and Submit</h1>
+      <p class="step-subtitle">Please verify all your information carefully before submitting your application to the Hopewell Healthcare Volunteer Network.</p>
+
+      <div class="review-sections">
+        <div class="review-section-card">
+          <div class="rsc-header"><div class="rsc-label">ROLE SELECTION</div><button class="rsc-edit" onclick="showVolStep(1)">✏ Edit</button></div>
+          <div class="rsc-value" id="reviewRole">—</div>
+        </div>
+        <div class="review-section-card">
+          <div class="rsc-header"><div class="rsc-label">PERSONAL INFORMATION</div><button class="rsc-edit" onclick="showVolStep(2)">✏ Edit</button></div>
+          <div class="review-grid-2">
+            <div><div class="review-field-label">Full Name</div><div class="review-field-value" id="reviewName">—</div></div>
+            <div><div class="review-field-label">Email Address</div><div class="review-field-value" id="reviewEmail">—</div></div>
+            <div><div class="review-field-label">Phone Number</div><div class="review-field-value" id="reviewPhone">—</div></div>
+            <div><div class="review-field-label">State of Residence</div><div class="review-field-value" id="reviewState">—</div></div>
+          </div>
+        </div>
+        <div class="review-section-card">
+          <div class="rsc-header"><div class="rsc-label">PROFESSIONAL BACKGROUND</div><button class="rsc-edit" onclick="showVolStep(3)">✏ Edit</button></div>
+          <div class="review-grid-2">
+            <div><div class="review-field-label">Medical Certification</div><div class="review-field-value" id="reviewCert">—</div></div>
+            <div><div class="review-field-label">Years of Experience</div><div class="review-field-value" id="reviewYears">—</div></div>
+            <div><div class="review-field-label">Specialized Skills</div><div class="review-field-value" id="reviewSkills">—</div></div>
+          </div>
+        </div>
+        <div class="review-section-card">
+          <div class="rsc-header"><div class="rsc-label">AVAILABILITY &amp; PREFERENCES</div><button class="rsc-edit" onclick="showVolStep(4)">✏ Edit</button></div>
+          <div class="review-grid-2">
+            <div><div class="review-field-label">Weekly Commitment</div><div class="review-field-value" id="reviewHours">—</div></div>
+            <div><div class="review-field-label">Preferred Start Date</div><div class="review-field-value" id="reviewStartDate">—</div></div>
+            <div><div class="review-field-label">Focus Areas</div><div class="review-field-value" id="reviewFocus">—</div></div>
+            <div><div class="review-field-label">Deployment Regions</div><div class="review-field-value" id="reviewRegions">—</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="consent-row">
+        <input type="checkbox" id="consentCheck" />
+        <label for="consentCheck">I confirm that the information provided is accurate and true to the best of my knowledge. I agree to the <a href="#">Terms of Volunteer Service</a> and have read the <a href="#">Privacy Policy</a> regarding my data processing.</label>
+      </div>
+      <span class="field-error" id="consentErr"></span>
+
+      <div class="vol-nav-actions" style="margin-top:1.5rem">
+        <button class="btn-vol-continue" id="vstep6Submit">Submit Final Application</button>
+        <button class="btn-vol-back" id="vstep6Back">← Back to Preferences</button>
+      </div>
+    </main>
+
+    <div class="review-right-sidebar">
+      <div class="joining-card">
+        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&q=80" alt="Healthcare workers" class="joining-img" />
+        <div class="joining-body">
+          <h4>Joining Hopewell</h4>
+          <p>Your contribution helps provide essential healthcare services to underserved communities across Nigeria.</p>
+          <div class="secure-app-badge">🛡 100% SECURE APPLICATION</div>
+        </div>
+      </div>
+      <div class="need-help-card">
+        <h4>Need assistance?</h4>
+        <p>If you have questions about the application process, our support team is here to help.</p>
+        <a href="mailto:support@hopewell-healthcare.org" class="help-email">✉ support@hopewell-healthcare.org</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== STEP 7: APPLICATION SUBMITTED ===== -->
+  <div class="vol-step" id="vstep7" style="display:none;min-height:100vh;display:none;flex-direction:column;background:#f0f4f8">
+
+    <div style="flex:1;display:flex;align-items:center;justify-content:center;padding:3rem 1.5rem">
+      <div style="max-width:1100px;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center">
+
+        <!-- LEFT: CONTENT -->
+        <div>
+          <div class="submitted-badge">&#10003; APPLICATION RECEIVED</div>
+          <h1 class="serif-heading submitted-title">Success!</h1>
+          <p class="submitted-desc">Thank you for choosing to share your expertise with Hopewell Clinical. Your application to join our Nigerian medical volunteer core has been successfully transmitted to our review board.</p>
+
+          <div class="submitted-next-steps">
+            <h4>Next Steps</h4>
+            <div class="submitted-step-item">
+              <div class="submitted-step-icon">&#128260;</div>
+              <div>
+                <div class="submitted-step-title">Reviewing your application (2-3 days)</div>
+                <div class="submitted-step-desc">Our clinical leads will verify your credentials and experience.</div>
+              </div>
+            </div>
+            <div class="submitted-step-item">
+              <div class="submitted-step-icon">&#128140;</div>
+              <div>
+                <div class="submitted-step-title">Onboarding email</div>
+                <div class="submitted-step-desc">Check your inbox for a detailed sanctuary orientation packet.</div>
+              </div>
+            </div>
+            <div class="submitted-step-item">
+              <div class="submitted-step-icon">&#128203;</div>
+              <div>
+                <div class="submitted-step-title">Clinical matching</div>
+                <div class="submitted-step-desc">We'll pair you with a clinical program that fits your specialty.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="submitted-actions">
+            <a href="index.html" class="btn btn-teal btn-lg">Back to Home &#8594;</a>
+            <button class="btn-vol-back" onclick="showVolStep(8)">View Confirmation Email</button>
+          </div>
+        </div>
+
+        <!-- RIGHT: IMAGE -->
+        <div class="submitted-right">
+          <div class="submitted-img-wrap">
+            <img src="images/Hopewell-volunteers.png" alt="Hopewell Volunteers" />
+            <div class="submitted-stats-card">
+              <div class="submitted-stats-num">1,200+</div>
+              <div class="submitted-stats-label">LIVES IMPACTED MONTHLY</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <footer style="background:var(--white);border-top:1px solid var(--border);padding:1.25rem 1.5rem;margin-top:auto">
+      <div style="max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem">
+        <div style="font-size:0.875rem;font-weight:700;color:var(--navy)">Hopewell Clinical</div>
+        <div style="display:flex;gap:1.5rem;flex-wrap:wrap">
+          <a href="#" style="font-size:0.75rem;color:var(--text-muted);text-decoration:none">Privacy Policy</a>
+          <a href="#" style="font-size:0.75rem;color:var(--text-muted);text-decoration:none">Terms of Service</a>
+          <a href="#" style="font-size:0.75rem;color:var(--text-muted);text-decoration:none">Volunteer Conduct</a>
+          <a href="#" style="font-size:0.75rem;color:var(--text-muted);text-decoration:none">Accessibility</a>
+        </div>
+        <p style="font-size:0.72rem;color:var(--text-muted);margin:0">&copy; 2024 Hopewell Healthcare. The Clinical Sanctuary.</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ===== STEP 8: CONFIRMATION EMAIL ===== -->
+  <div class="vol-step" id="vstep8" style="display:none">
+    <!-- EMAIL CLIENT NAV -->
+    <nav class="email-client-nav">
+      <div class="vol-nav-inner">
+        <a href="index.html" class="email-client-brand">Hopewell Clinical</a>
+        <div class="navbar-links">
+          <a href="#">Opportunities</a>
+          <a href="#">Clinical Programs</a>
+          <a href="#">Sanctuary Portal</a>
+          <a href="#">About Us</a>
+        </div>
+        <div class="portal-nav-right">
+          <a href="dashboard.html" class="btn btn-teal btn-sm">Support</a>
+          <div class="topbar-avatar" id="step8Avatar">?</div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="email-client-body">
+      <div class="email-client-wrap">
+
+        <!-- EMAIL TOOLBAR -->
+        <div class="email-toolbar">
+          <div class="email-toolbar-left">
+            <button class="email-tool-btn" onclick="showVolStep(6)">&#8592;</button>
+            <button class="email-tool-btn">&#128190;</button>
+            <button class="email-tool-btn">&#8505;</button>
+            <button class="email-tool-btn">&#128465;</button>
+          </div>
+          <div class="email-toolbar-right">
+            <span class="email-count">1 of 124</span>
+            <button class="email-tool-btn">&#8249;</button>
+            <button class="email-tool-btn">&#8250;</button>
+          </div>
+        </div>
+
+        <!-- EMAIL CARD -->
+        <div class="email-card">
+
+          <!-- SUBJECT -->
+          <div class="email-subject-line">Your Hopewell Clinical Application: Next Steps</div>
+
+          <!-- SENDER META -->
+          <div class="email-sender-row">
+            <div class="email-sender-avatar">JD</div>
+            <div class="email-sender-info">
+              <div class="email-sender-name">
+                Dr. Julian Danvers
+                <span class="email-sender-addr">&lt;program.director@hopewellclinical.org&gt;</span>
+              </div>
+              <div class="email-sender-to">To: <span id="emailToName">Volunteer</span> &lt;<span id="emailToAddr">volunteer@email.com</span>&gt;</div>
+            </div>
+            <div class="email-sender-date">Oct 24, 2026, 10:14 AM &#9733;</div>
+          </div>
+
+          <!-- BANNER -->
+          <div class="email-hero-banner">
+            <div class="email-hero-overlay"></div>
+            <div class="email-hero-text">Thank You for Your<br>Interest in Hopewell.</div>
+          </div>
+
+          <!-- BODY -->
+          <div class="email-body-content">
+            <p>Dear <span id="emailDearName">Volunteer</span>,</p>
+            <p>It is with great appreciation that I acknowledge the receipt of your application to join the Hopewell Clinical volunteer team. We are honored that you've chosen to dedicate your time and expertise to our community.</p>
+            <p>At <strong>Hopewell Healthcare</strong>, our mission is to create a <em>Clinical Sanctuary</em>&mdash;a space where medical excellence meets profound human empathy. Volunteers like you are the heartbeat of this vision, providing the essential support that allows our clinical programs to flourish and our patients to feel truly seen.</p>
+
+            <div class="email-status-box">
+              <div class="email-status-title">&#128260; Current Status: Clinical Matching</div>
+              <p>Our coordination team is currently reviewing your background and professional experience. We focus on &ldquo;Clinical Matching&rdquo; to ensure your specific skills align with a program where you can make the most meaningful impact.</p>
+            </div>
+
+            <p>We anticipate the review process will take approximately 3&ndash;5 business days. Once complete, a member of our sanctuary staff will reach out to schedule a brief introductory conversation.</p>
+
+            <a href="dashboard.html" class="btn btn-teal" style="display:inline-block;margin:1.5rem 0;padding:0.75rem 1.5rem">View Application Status</a>
+
+            <div class="email-sign-off">
+              <p>Warmly,<br><strong>Dr. Julian Danvers</strong><br>Program Director, Clinical Sanctuary Initiative<br>Hopewell Healthcare</p>
+            </div>
+
+            <div class="email-attachments">
+              <div class="email-attachment">&#128196; Volunteer_Guide.pdf</div>
+              <div class="email-attachment">&#128274; Ethics_Manual.pdf</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="email-client-footer">
+      <div class="email-footer-inner">
+        <div class="email-footer-brand">Hopewell Healthcare</div>
+        <div class="email-footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Volunteer Conduct</a>
+          <a href="#">Accessibility</a>
+        </div>
+        <p>&copy; 2024 Hopewell Healthcare. The Clinical Sanctuary.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/volunteer.js"></script>
+</body>
+</html>

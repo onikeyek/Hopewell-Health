@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Success Stories — HopeWell</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/stories.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <div class="logo-icon">H</div>
+        <span>HopeWell</span>
+      </a>
+      <div class="navbar-links">
+        <a href="index.html">Home</a>
+        <a href="stories.html" class="active">Success Stories</a>
+        <a href="dashboard.html">Impact</a>
+        <a href="#">Archive</a>
+      </div>
+      <div class="navbar-actions">
+        <a href="calculator.html" class="btn btn-primary">Volunteer</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="stories.html">Success Stories</a>
+      <a href="dashboard.html">Impact</a>
+      <a href="#">Archive</a>
+    </div>
+  </nav>
+
+  <main class="stories-main container">
+
+    <!-- PAGE HEADER -->
+    <div class="stories-header">
+      <div class="stories-header-tag">OUR IMPACT JOURNEY</div>
+      <h1>Real stories of <span class="stories-accent">transformation.</span></h1>
+      <p>Explore how your support translates into tangible change. From rural health revitalization to empowering local midwives, every story is a testament to community resilience.</p>
+    </div>
+
+    <!-- SUMMARY STATS -->
+    <div class="stories-stats">
+      <div class="stories-stat">
+        <div class="stories-stat-value">12,400+</div>
+        <div class="stories-stat-label">PATIENTS TREATED</div>
+        <div class="stories-stat-change">↑ 18%</div>
+      </div>
+      <div class="stories-stat">
+        <div class="stories-stat-value">45%</div>
+        <div class="stories-stat-label">DISEASE AVERAGE</div>
+        <div class="stories-stat-change">↑ 7%</div>
+      </div>
+      <div class="stories-stat">
+        <div class="stories-stat-value">12</div>
+        <div class="stories-stat-label">CLINICS OPENED</div>
+        <div class="stories-stat-change">↑ 4</div>
+      </div>
+    </div>
+
+    <!-- STORIES LIST (dynamically rendered) -->
+    <div id="storiesList">
+      <div class="loading-state"><div class="spinner"></div><p>Loading stories...</p></div>
+    </div>
+
+    <!-- CTA BANNER -->
+    <div class="stories-cta">
+      <h2>Become a part of the next success story.</h2>
+      <div class="stories-cta-actions">
+        <a href="calculator.html" class="btn btn-outline btn-lg">Donate Now</a>
+        <a href="#" class="btn btn-outline btn-lg">Join as Volunteer</a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-bottom">
+        <a href="index.html" class="navbar-logo">
+          <div class="logo-icon">H</div>
+          <span>HopeWell</span>
+        </a>
+        <p>© 2024 HopeWell Healthcare. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Annual Report</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/stories.js"></script>
+</body>
+</html>
