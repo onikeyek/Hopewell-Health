@@ -160,7 +160,7 @@ All AI-generated code was reviewed, tested, and adapted to fit the specific requ
 - **Backend:** Render (free tier) — Node.js web service pointing to `hopewell-backend/` subdirectory
 
 ## GROUP MEMBER 
-**NAIMOT YEKINI
-**J0-ANN OBEWE 
+**NAIMOT YEKINI**
+**J0-ANN OBEWE**
 
 © 2026 HopeWell Healthcare Foundation. Year 2 Project.
